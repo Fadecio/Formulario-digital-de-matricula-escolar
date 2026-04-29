@@ -5,24 +5,133 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Termo de Matrícula</title>
     <link rel="stylesheet" href="src/css/reset.css" />
-    <link rel="stylesheet" href="src/css/header.css">
+    <link rel="stylesheet" href="src/css/variable.css" />
+    <link rel="stylesheet" href="src/css/header.css" />
     <link rel="stylesheet" href="src/css/global.css" />
   </head>
   <body>
-    <header class="header">
-      <div class="header-container">
-            <div class="header-logo">
-                <img src="src/imagen/logo.jpg" alt="Logo da Prefeitura de Quixadá" />
-            </div>
-            <div class="header-info">
-                <p><strong>PREFEITURA MUNICIPAL DE QUIXADÁ</strong></p>
-                <p><strong>SECRETARIA MUNICIPAL DE EDUCAÇÃO</strong></p>
-                <p><strong>DISTRITO EDUCACIONAL SÃO JOÃO</strong></p>
-            </div>
+    <header class="header-container">
+      <div class="header-logo">
+        <img src="src/imagen/logo.jpg" alt="Logo da Prefeitura Municipal" />
+      </div>
+      <div class="header-info">
+        <p>PREFEITURA MUNICIPAL CIDADE</p>
+        <p>SECRETARIA MUNICIPAL DE EDUCAÇÃO</p>
+        <p class="paragrafo-info">DISTRITO EDUCAIONAL INSTITUTO</p>
+        <p class="header-title">TERMO DE MATRÍCULA</p>
       </div>
     </header>
+
     <main>
-        <p class="main-title">TERMO DE MATRÍCULA</p>
+      <form action="#" method="post">
+        <section class="form-card">
+          <div class="section-header">
+            <span class="section-number">1</span>
+
+            <div>
+              <h2 class="form-title">Dados do Aluno</h2>
+              <p class="section-description">
+                Por favor, preencha os dados solicitados abaixo.
+              </p>
+            </div>
+          </div>
+
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="nomeAluno">Nome do aluno</label>
+              <input
+                type="text"
+                id="nomeAluno"
+                name="nomeAluno"
+                class="input-control"
+                placeholder="Digite o nome completo"
+                required
+              />
+              <span class="error-message">Este campo é obrigatório.</span>
+            </div>
+
+            <div class="form-group">
+              <label for="sexo">Sexo</label>
+              <select id="sexo" name="sexo" class="input-control">
+                <option value="">Selecione</option>
+                <option value="masculino">Masculino</option>
+                <option value="feminino">Feminino</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="dataNascimento">Data de Nascimento</label>
+              <input
+                type="date"
+                id="dataNascimento"
+                name="dataNascimento"
+                class="input-control"
+                required
+              />
+              <span class="error-message">Este campo é obrigatório.</span>
+            </div>
+
+            <div class="form-group">
+              <label for="cidade">Cidade</label>
+              <input
+                type="text"
+                id="cidade"
+                name="cidade"
+                class="input-control"
+                placeholder="Digite a cidade"
+              />
+              <span class="error-message">Este campo é obrigatório.</span>
+            </div>
+
+            <div class="form-group">
+              <label for="estado">Estado</label>
+              <select id="estado" name="estado" class="input-control">
+                <option value="">Selecione</option>
+                <option value="AC">Acre</option>
+                <option value="AP">Amapá</option>
+                <option value="AM">Amazonas</option>
+                <option value="BA">Bahia</option>
+                <option value="CE">Ceará</option>
+                <option value="DF">Distrito Federal</option>
+                <option value="ES">Espírito Santo</option>
+                <option value="GO">Goiás</option>
+                <option value="MA">Maranhão</option>
+                <option value="MT">Mato Grosso</option>
+                <option value="MS">Mato Grosso do Sul</option>
+                <option value="MG">Minas Gerais</option>
+                <option value="PA">Pará</option>
+                <option value="PB">Paraíba</option>
+                <option value="PR">Paraná</option>
+                <option value="PE">Pernambuco</option>
+                <option value="PI">Piauí</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="RN">Rio Grande do Norte</option>
+                <option value="RS">Rio Grande do Sul</option>
+                <option value="RO">Rondônia</option>
+                <option value="RR">Roraima</option>
+                <option value="SC">Santa Catarina</option>
+                <option value="SP">São Paulo</option>
+                <option value="SE">Sergipe</option>
+                <option value="TO">Tocantins</option>
+              </select>
+              <span class="error-message">Selecione o estado.</span>
+            </div>
+
+            <div class="form-group">
+              <label for="idade">Idade</label>
+              <input
+                type="number"
+                id="idade"
+                name="idade"
+                class="input-control"
+                placeholder="Ex: 10"
+                min="0"
+              />
+              <span class="error-message">Informe uma idade válida.</span>
+            </div>
+          </div>
+        </section>
+      </form>
     </main>
   </body>
 </html>
