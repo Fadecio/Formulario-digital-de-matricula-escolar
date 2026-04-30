@@ -289,40 +289,276 @@
         <section class="form-card">
           <div class="section-header">
             <span class="section-number">5</span>
+
             <div>
               <h2 class="section-title">Filiação</h2>
+              <p class="section-description">
+                Preencha com dados do pai, mãe ou responsável.
+              </p>
+            </div>
+          </div>
 
-              <div class="form-grid">
-                <div class="form-group form-group--full">
-                  <h3 class="form-subtitle">Filiação 1</h3>
-                </div>
+          <div>
+            <h2 class="section-title">Filiação 1</h2>
+          </div>
 
-                <div class="form-group form-group--full">
-                  <label for="nomeFiliacao1">Nome</label>
-                  <input
-                    type="text"
-                    id="nomeFiliacao1"
-                    name="nomeFiliacao1"
-                    class="input-control"
-                    placeholder="Digite o nome completo"
-                    required
-                  />
-                  <span class="error-message">Este campo é obrigatório.</span>
-                </div>
+          <div class="form-grid">
+            <div class="form-group form-group--full">
+              <label for="nomeFiliacao1">Nome</label>
+              <input
+                type="text"
+                id="nomeFiliacao1"
+                name="nomeFiliacao1"
+                class="input-control"
+                required
+              />
+              <span class="error-message">Este campo é obrigatório.</span>
+            </div>
 
-                <div class="form-group">
-                  <label for="escolaridadeFiliacao1">Escolaridade</label>
-                  <input
-                    type="text"
-                    id="escolaridadeFiliacao1"
-                    name="escolaridadeFiliacao1"
-                    class="input-control"
-                  />
-                </div>
-              </div>
+            <div class="form-group form-group--full">
+              <label for="profissaoFiliacao1">Profissão</label>
+              <input
+                type="text"
+                id="profissaoFiliacao1"
+                name="profissaoFiliacao1"
+                class="input-control"
+                required
+              />
+              <span class="error-message">Este campo é obrigatório.</span>
+            </div>
+
+            <div class="form-group form-group--full">
+              <label for="escolaridadeFiliacao1">Escolaridade</label>
+              <input
+                type="text"
+                id="escolaridadeFiliacao1"
+                name="escolaridadeFiliacao1"
+                class="input-control"
+              />
+            </div>
+
+            <div class="form-group form-group--full">
+              <label for="telefoneFiliacao1">Telefone</label>
+              <input
+                type="text"
+                id="telefoneFiliacao1"
+                name="telefoneFiliacao1"
+                class="input-control"
+                required
+              />
+              <span class="error-message">Este campo é obrigatório.</span>
+            </div>
+
+            <div class="form-group form-group--full">
+              <label for="emailFiliacao1">Email</label>
+              <input
+                type="email"
+                id="emailFiliacao1"
+                name="emailFiliacao1"
+                class="input-control"
+              />
+            </div>
+
+            <div>
+              <h2 class="section-title">Filiação 2</h2>
+            </div>
+          </div>
+
+          <div class="form-grid">
+            <div class="form-group form-group--full">
+              <label for="nomeFiliacao2">Nome</label>
+              <input
+                type="text"
+                id="nomeFiliacao2"
+                name="nomeFiliacao2"
+                class="input-control"
+              />
+            </div>
+
+            <div class="form-group form-group--full">
+              <label for="profissaoFiliacao2">Profissão</label>
+              <input
+                type="text"
+                id="profissaoFiliacao2"
+                name="profissaoFiliacao2"
+                class="input-control"
+              />
+            </div>
+
+            <div class="form-group form-group--full">
+              <label for="escolaridadeFiliacao2">Escolaridade</label>
+              <input
+                type="text"
+                id="escolaridadeFiliacao2"
+                name="escolaridadeFiliacao2"
+                class="input-control"
+              />
+            </div>
+
+            <div class="form-group form-group--full">
+              <label for="telefoneFiliacao1">Telefone</label>
+              <input
+                type="text"
+                id="telefoneFiliacao1"
+                name="telefoneFiliacao1"
+                class="input-control"
+                required
+              />
+              <span class="error-message">Este campo é obrigatório.</span>
+            </div>
+
+            <div class="form-group form-group--full">
+              <label for="emailFiliacao1">Email</label>
+              <input
+                type="email"
+                id="emailFiliacao1"
+                name="emailFiliacao1"
+                class="input-control"
+              />
             </div>
           </div>
         </section>
+
+        <section class="form-card">
+          <div class="section-header">
+            <span class="section-number">6</span>
+
+            <div>
+              <h2 class="section-title">Atualização de dados escolares</h2>
+            </div>
+          </div>
+
+          <div class="form-grid">
+            <div class="form-group form-group--full">
+              <label for="transporte">Transporte escolar</label>
+              <select id="transporte" name="transporte" class="input-control">
+                <option value="">Selecione</option>
+                <option value="sim">Sim</option>
+                <option value="nao">Não</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="carro">Tipo de transporte</label>
+              <input
+                type="text"
+                id="carro"
+                name="carro"
+                class="input-control"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="nis">NIS</label>
+              <input type="text" id="nis" name="nis" class="input-control" />
+            </div>
+
+            <div class="form-group">
+              <label for="sige">ID SIGE</label>
+              <input type="text" id="sige" name="sige" class="input-control" />
+            </div>
+
+            <div class="form-group">
+              <label for="censo">ID Censo</label>
+              <input
+                type="text"
+                id="censo"
+                name="censo"
+                class="input-control"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="especial">Necessidades especiais?</label>
+              <div class="radio-group">
+                <label class="radio-option">
+                  <input type="radio" name="necessidadesEspeciais" value="sim" />
+                  Sim
+                </label>
+
+                <label class="radio-option">
+                  <input type="radio" name="necessidadesEspeciais" value="nao" />
+                  Não
+                </label>
+              </div>
+
+              <div class="form-group">
+                <label for="tipoDeficiencia">Tipo de deficiência</label>
+                <input
+                  type="text"
+                  id="tipoDeficiencia"
+                  name="TipoDeficiencia"
+                  class="input-control"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="cid">Número do CID</label>
+                <input
+                  type="text"
+                  id="cid"
+                  name="cid"
+                  class="input-control"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="laudo">Possui laudo?</label>
+                <div class="radio-group">
+                  <label class="radio-option">
+                    <input type="radio" name="possuiLaudo" value="sim" />
+                    Sim
+                  </label>
+
+                  <label class="radio-option">
+                    <input type="radio" name="possuiLaudo" value="nao" />
+                   Não
+                  </label>
+              </div>
+
+              <div class="form-group">
+                <label for="beneficioSocial">Possui benefício social?</label>
+                <div class="radio-group">
+                  <label class="radio-option">
+                    <input type="radio" name="possuiBeneficioSocial" value="sim" />
+                    Sim
+                  </label>
+
+                  <label class="radio-option">
+                    <input type="radio" name="possuiBeneficioSocial" value="nao" />
+                   Não
+                  </label>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        <section class="form-card">
+          <div class="section-header">
+            <span class="section-number">7</span>
+
+            <div>
+              <h2 class="section-title">Termo de Responsabilidade</h2>
+              <p class="section-description">
+                Marque a caixa se você concorda com os termos citados.
+              </p>
+            </div>
+          </div>
+
+          <div class="form-grid">
+            <p>
+              Declaro que as informações fornecidas neste formulário são verdadeiras
+              e na qualidade de responsável pelo(a) aluno(a) acima citado no ano letivo em curso, comprometo-me com a frequência, o incentivo ao estudo e permanência do(a) aluno(a) na escola, como também com seu material didático e o zelo pelos bens públicos que estão à sua disposição na Unidade de Ensino.
+            </p>
+
+            <label class="checkbox-option">
+              <input type="checkbox" name="termoResponsabilidade" required>
+              <span>Li e aceito o termo de responsabilidade.</span>
+            </label>
+          </div>            
+        </section>
+
       </form>
     </main>
   </body>

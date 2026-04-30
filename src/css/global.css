@@ -112,6 +112,20 @@ body {
   color: var(--primary-text-color);
 }
 
+.radio-group {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.radio-option {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.95rem;
+  color: var(--primary-text-color);  
+}
+
 .input-control {
   width: 100%;
   min-height: 4.6rem;
@@ -122,9 +136,7 @@ body {
   color: var(--primary-text-color);
   background-color: var(--background-color);
   outline: none;
-  transition:
-    border-color 0.2s ease,
-    box-shadow 0.2s ease;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .input-control::placeholder {
@@ -152,6 +164,22 @@ body {
 
 .form-group.is-valid .input-control {
   border-color: var(--success-color);
+}
+
+.checkbox-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--primary-text-color);
+}
+
+.checkbox-option input {
+  margin-top: 0.2rem;
+}
+
+.checkbox-option span {
+  margin-top: 0.2rem;
 }
 
 @media (min-width: 768px) {
