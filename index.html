@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="src/css/global.css" />
   </head>
   <body>
-    <header class="header-container">      
-      <div class="header-info">        
+    <header class="header-container">
+      <div class="header-info">
         <h1>TERMO DE MATRÍCULA</h1>
       </div>
     </header>
@@ -121,6 +121,205 @@
                 min="0"
               />
               <span class="error-message">Informe uma idade válida.</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="form-card">
+          <div class="section-header">
+            <span class="section-number">2</span>
+
+            <div>
+              <h2 class="section-title">Documentos</h2>
+            </div>
+          </div>
+
+          <div class="form-grid">
+            <div class="form-group form-group--full">
+              <label for="registroNascimento">Registro de nascimento</label>
+              <input
+                type="text"
+                id="registroNascimento"
+                name="registroNascimento"
+                class="input-control"
+                required
+              />
+              <span class="error-message">Este campo é obrigatório.</span>
+            </div>
+
+            <div class="form-group">
+              <label for="folha">Folha</label>
+              <input
+                type="text"
+                id="folha"
+                name="folha"
+                class="input-control"
+                required
+              />
+              <span class="error-message">Esta campo é obrigatório</span>
+            </div>
+
+            <div class="form-group">
+              <label for="livro">Livro</label>
+              <input
+                type="text"
+                id="livro"
+                name="livro"
+                class="input-control"
+                required
+              />
+              <span class="error-message">Este campo é obrigatório.</span>
+            </div>
+
+            <div class="form-group">
+              <label for="emissao">Emissão</label>
+              <input
+                type="date"
+                id="emissao"
+                name="emissao"
+                class="input-control"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="cartorio">Cartório</label>
+              <input
+                type="text"
+                id="cartorio"
+                name="cartorio"
+                class="input-control"
+                required
+              />
+              <span class="error-message">Selecione o estado.</span>
+            </div>
+
+            <div class="form-group">
+              <label for="certidao">Certidão modelo novo</label>
+              <input
+                type="text"
+                id="certidao"
+                name="certidao"
+                class="input-control"
+              />
+            </div>
+            <div class="form-group">
+              <label for="cpf">CPF</label>
+              <input type="text" id="cpf" name="cpf" class="input-control" />
+            </div>
+            <div class="form-group">
+              <label for="cartaoSus">Cartão do SUS</label>
+              <input
+                type="text"
+                id="cartão"
+                name="cartao"
+                class="input-control"
+              />
+            </div>
+          </div>
+        </section>
+
+        <section class="form-card">
+          <div class="section-header">
+            <span class="section-number">3</span>
+
+            <div>
+              <h2 class="section-title">Endereço</h2>
+            </div>
+          </div>
+
+          <div class="form-grid">
+            <div class="form-group form-group--full">
+              <label for="endereco">Endereço</label>
+              <input
+                type="text"
+                id="endereco"
+                name="endereco"
+                class="input-control"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="bairro">Bairro</label>
+              <input
+                type="text"
+                id="bairro"
+                name="bairro"
+                class="input-control"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="cep">CEP</label>
+              <input type="text" id="cep" name="cep" class="input-control" />
+            </div>
+          </div>
+        </section>
+
+        <section class="form-card">
+          <div class="section-header">
+            <span class="section-number">4</span>
+
+            <div>
+              <h2 class="section-title">Cor/Raça</h2>
+            </div>
+          </div>
+
+          <div class="form-grid">
+            <div class="form-group form-group--full">
+              <label for="corRaca">Cor/Raça</label>
+              <select
+                id="corRaca"
+                name="corRaca"
+                class="input-control"
+                required
+              >
+                <option value="">Selecione</option>
+                <option value="branca">Branca</option>
+                <option value="preta">Preta</option>
+                <option value="parda">Parda</option>
+                <option value="indigena">Indigena</option>
+                <option value="amarela">Amarela</option>
+                <option value="naoDeclarado">Não declarada</option>
+              </select>
+              <span class="error-message">Este campo é obrigatório.</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="form-card">
+          <div class="section-header">
+            <span class="section-number">5</span>
+            <div>
+              <h2 class="section-title">Filiação</h2>
+
+              <div class="form-grid">
+                <div class="form-group form-group--full">
+                  <h3 class="form-subtitle">Filiação 1</h3>
+                </div>
+
+                <div class="form-group form-group--full">
+                  <label for="nomeFiliacao1">Nome</label>
+                  <input
+                    type="text"
+                    id="nomeFiliacao1"
+                    name="nomeFiliacao1"
+                    class="input-control"
+                    placeholder="Digite o nome completo"
+                    required
+                  />
+                  <span class="error-message">Este campo é obrigatório.</span>
+                </div>
+
+                <div class="form-group">
+                  <label for="escolaridadeFiliacao1">Escolaridade</label>
+                  <input
+                    type="text"
+                    id="escolaridadeFiliacao1"
+                    name="escolaridadeFiliacao1"
+                    class="input-control"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </section>
