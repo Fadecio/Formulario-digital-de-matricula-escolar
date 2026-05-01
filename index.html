@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -156,7 +156,7 @@
                 class="input-control"
                 required
               />
-              <span class="error-message">Esta campo é obrigatório</span>
+              <span class="error-message">Este campo é obrigatório</span>
             </div>
 
             <div class="form-group">
@@ -210,8 +210,8 @@
               <label for="cartaoSus">Cartão do SUS</label>
               <input
                 type="text"
-                id="cartão"
-                name="cartao"
+                id="cartaoSus"
+                name="cartaoSus"
                 class="input-control"
               />
             </div>
@@ -396,11 +396,11 @@
             </div>
 
             <div class="form-group form-group--full">
-              <label for="telefoneFiliacao1">Telefone</label>
+              <label for="telefoneFiliacao2">Telefone</label>
               <input
                 type="text"
-                id="telefoneFiliacao1"
-                name="telefoneFiliacao1"
+                id="telefoneFiliacao2"
+                name="telefoneFiliacao2"
                 class="input-control"
                 required
               />
@@ -408,11 +408,11 @@
             </div>
 
             <div class="form-group form-group--full">
-              <label for="emailFiliacao1">Email</label>
+              <label for="emailFiliacao2">Email</label>
               <input
                 type="email"
-                id="emailFiliacao1"
-                name="emailFiliacao1"
+                id="emailFiliacao2"
+                name="emailFiliacao2"
                 class="input-control"
               />
             </div>
@@ -430,15 +430,22 @@
 
           <div class="form-grid">
             <div class="form-group form-group--full">
-              <label for="transporte">Transporte escolar</label>
-              <select id="transporte" name="transporte" class="input-control">
-                <option value="">Selecione</option>
-                <option value="sim">Sim</option>
-                <option value="nao">Não</option>
-              </select>
+              <fieldset class="radio-fieldset">
+                <legend>Transporte escolar</legend>
+                <div class="radio-group">
+                  <label class="radio-option">
+                    <input type="radio" name="transporteEscolar" value="sim" />
+                    Sim
+                  </label>
+                  <label class="radio-option">
+                    <input type="radio" name="transporteEscolar" value="nao" />
+                    Não
+                  </label>
+                </div>
+              </fieldset>
             </div>
 
-            <div class="form-group">
+            <div class="form-group form-group--full">
               <label for="carro">Tipo de transporte</label>
               <input
                 type="text"
@@ -448,17 +455,17 @@
               />
             </div>
 
-            <div class="form-group">
+            <div class="form-group form-group--full">
               <label for="nis">NIS</label>
               <input type="text" id="nis" name="nis" class="input-control" />
             </div>
 
-            <div class="form-group">
+            <div class="form-group form-group--full">
               <label for="sige">ID SIGE</label>
               <input type="text" id="sige" name="sige" class="input-control" />
             </div>
 
-            <div class="form-group">
+            <div class="form-group form-group--full">
               <label for="censo">ID Censo</label>
               <input
                 type="text"
@@ -468,31 +475,35 @@
               />
             </div>
 
-            <div class="form-group">
-              <label for="especial">Necessidades especiais?</label>
-              <div class="radio-group">
-                <label class="radio-option">
-                  <input type="radio" name="necessidadesEspeciais" value="sim" />
-                  Sim
-                </label>
+            <div class="form-group form-group--full">
+                <fieldset class="radio-fieldset">
+                  <legend>Necessidades especiais?</legend>
 
-                <label class="radio-option">
-                  <input type="radio" name="necessidadesEspeciais" value="nao" />
-                  Não
-                </label>
+                  <div class="radio-group ">
+                    <label class="radio-option">
+                      <input type="radio" name="necessidadesEspeciais" value="sim" />
+                      Sim
+                    </label>
+
+                    <label class="radio-option">
+                      <input type="radio" name="necessidadesEspeciais" value="nao" />
+                      Não
+                    </label>
+                  </div>
+                </fieldset>
               </div>
 
-              <div class="form-group">
+              <div class="form-group form-group--full">
                 <label for="tipoDeficiencia">Tipo de deficiência</label>
                 <input
                   type="text"
                   id="tipoDeficiencia"
-                  name="TipoDeficiencia"
+                  name="tipoDeficiencia"
                   class="input-control"
                 />
               </div>
 
-              <div class="form-group">
+              <div class="form-group form-group--full">
                 <label for="cid">Número do CID</label>
                 <input
                   type="text"
@@ -502,32 +513,40 @@
                 />
               </div>
 
-              <div class="form-group">
-                <label for="laudo">Possui laudo?</label>
-                <div class="radio-group">
-                  <label class="radio-option">
-                    <input type="radio" name="possuiLaudo" value="sim" />
-                    Sim
-                  </label>
+              <div class="form-group form-group--full">
+                <fieldset class="radio-fieldset">
+                  <legend>Possui laudo?</legend>
 
-                  <label class="radio-option">
-                    <input type="radio" name="possuiLaudo" value="nao" />
-                   Não
-                  </label>
+                  <div class="radio-group">
+                    <label class="radio-option">
+                      <input type="radio" name="possuiLaudo" value="sim" />
+                      Sim
+                    </label>
+
+                    <label class="radio-option">
+                      <input type="radio" name="possuiLaudo" value="nao" />
+                      Não
+                    </label>
+                  </div>
+                </fieldset>
               </div>
 
-              <div class="form-group">
-                <label for="beneficioSocial">Possui benefício social?</label>
-                <div class="radio-group">
-                  <label class="radio-option">
-                    <input type="radio" name="possuiBeneficioSocial" value="sim" />
-                    Sim
-                  </label>
+              <div class="form-group form-group--full">
+                <fieldset class="radio-fieldset">
+                  <legend>Possui benefício social?</legend>
 
-                  <label class="radio-option">
-                    <input type="radio" name="possuiBeneficioSocial" value="nao" />
-                   Não
-                  </label>
+                  <div class="radio-group">
+                    <label class="radio-option">
+                      <input type="radio" name="possuiBeneficioSocial" value="sim" />
+                      Sim
+                    </label>
+
+                    <label class="radio-option">
+                      <input type="radio" name="possuiBeneficioSocial" value="nao" />
+                      Não
+                    </label>
+                  </div>
+                </fieldset>
               </div>
 
             </div>

@@ -1,20 +1,16 @@
 body {
   width: 100%;
-  font-family:
-    system-ui,
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    sans-serif;
+  font-family: var(--font-family);
   background-color: var(--background-color);
   color: var(--primary-text-color);
   line-height: 1.2;
   padding: 1rem;
+  font-size: 1rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* .header {
-  max-width: 100%;
-} */
+
 
 .header-container {
   width: 100%;
@@ -29,6 +25,7 @@ body {
 .header-logo {
   width: 5rem;
   height: 5rem;
+  flex-shrink: 0;
 }
 
 .header-logo img {
@@ -61,12 +58,17 @@ body {
   box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
   margin-bottom: 2rem;
   margin-top: 3rem;
+  transition: box-shadow 200ms ease-in-out, border-color 200ms ease-in-out;
+}
+
+.form-card:hover {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
 }
 
 .section-header {
   display: flex;
   align-items: flex-start;
-  gap: 1.2rem;
+  gap: 1.5rem;
   margin-bottom: 2rem;
 }
 
@@ -75,23 +77,28 @@ body {
   height: 3.2rem;
   flex-shrink: 0;
   border-radius: 50%;
-  background-color: var(--institutional-blue);
+  background: linear-gradient(135deg, var(--institutional-blue), var(--institutional-blue-hover));
   color: white;
   font-weight: 700;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 1.1rem;
+  box-shadow: 0 8px 16px -2px rgba(0, 0, 0, 0.1);
 }
 
 .section-title {
-  font-size: 1.2rem;
-  line-height: 1.2;
-  margin-bottom: 0.4rem;
+  font-size: 1.5rem;
+  line-height: 1.4;
+  margin-bottom: 0.5rem;
+  color: var(--primary-text-color);
+  font-weight: 700;
 }
 
 .section-description {
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: var(--secondary-text-color);
+  line-height: 1.8;
 }
 
 .form-grid {
@@ -103,59 +110,130 @@ body {
 .form-group {
   display: flex;
   flex-direction: column;
-  gap: 0.6rem;
+  gap: 0.5rem;
 }
 
 .form-group label {
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 600;
   color: var(--primary-text-color);
+  letter-spacing: 0.3px;
+}
+
+.form-group:has(input[required]) label::after {
+  content: " *";
+  color: var(--error-color);
+  margin-left: 0.3rem;
+}
+
+.radio-fieldset {
+  border: none;
 }
 
 .radio-group {
   display: flex;
   gap: 1.5rem;
   align-items: center;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
 }
 
 .radio-option {
   display: flex;
   align-items: center;
-  gap: 0.4rem;
-  font-size: 0.95rem;
-  color: var(--primary-text-color);  
+  gap: 0.5rem;
+  font-size: 1rem;
+  color: var(--primary-text-color);
+  cursor: pointer;
+  user-select: none;
+  transition: color 150ms ease-in-out;
+}
+
+.radio-option:hover {
+  color: var(--institutional-blue);
+}
+
+.radio-option input[type="radio"],
+.radio-option input[type="checkbox"] {
+  cursor: pointer;
+  width: 1.2rem;
+  height: 1.2rem;
+  accent-color: var(--institutional-blue);
+  transition: all 150ms ease-in-out;
+}
+
+.radio-option input[type="radio"]:hover,
+.radio-option input[type="checkbox"]:hover {
+  transform: scale(1.1);
+}
+
+.radio-option input[type="radio"]:focus,
+.radio-option input[type="checkbox"]:focus {
+  outline: 2px solid var(--institutional-blue);
+  outline-offset: 2px;
 }
 
 .input-control {
   width: 100%;
-  min-height: 4.6rem;
-  border: 1px solid var(--border-color);
+  min-height: 2.9rem;
+  border: 2px solid var(--border-light);
   border-radius: 1rem;
-  padding: 10px 12px;
+  padding: 0.5rem 1rem;
   font-size: 1rem;
   color: var(--primary-text-color);
   background-color: var(--background-color);
   outline: none;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  transition: border-color 200ms ease-in-out, box-shadow 200ms ease-in-out, background-color 200ms ease-in-out;
+  font-family: var(--font-family);
 }
 
 .input-control::placeholder {
   color: var(--secondary-text-color);
 }
 
+.input-control:hover {
+  border-color: var(--border-color);
+}
+
 .input-control:focus {
   border-color: var(--institutional-blue);
-  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+  box-shadow: 0 0 0 3px var(--institutional-blue-light);
+  background-color: var(--card-color);
+}
+
+.input-control:disabled {
+  background-color: #f3f4f6;
+  color: var(--secondary-text-color);
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.input-control:required:valid {
+  border-color: var(--success-color);
 }
 
 .error-message {
   display: none;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   color: var(--error-color);
+  margin-top: 0.3rem;
+  animation: slideDown 150ms ease-in-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .form-group.is-invalid .input-control {
   border-color: var(--error-color);
+  background-color: var(--error-light);
 }
 
 .form-group.is-invalid .error-message {
@@ -164,22 +242,44 @@ body {
 
 .form-group.is-valid .input-control {
   border-color: var(--success-color);
+  background-color: var(--success-light);
 }
 
 .checkbox-option {
   display: flex;
   align-items: flex-start;
   gap: 0.5rem;
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: var(--primary-text-color);
+  cursor: pointer;
+  user-select: none;
+  transition: color 150ms ease-in-out;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.checkbox-option:hover {
+  color: var(--institutional-blue);
+  background-color: var(--institutional-blue-light);
 }
 
 .checkbox-option input {
-  margin-top: 0.2rem;
+  margin-top: 0.3rem;
+  cursor: pointer;
 }
 
 .checkbox-option span {
-  margin-top: 0.2rem;
+  margin-top: 0.3rem;
+  line-height: 1.6;
+}
+
+.radio-fieldset legend {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--primary-text-color);
+  margin-bottom: 0.5rem;
+  padding: 0;
+  letter-spacing: 0.3px;
 }
 
 @media (min-width: 768px) {
@@ -188,21 +288,35 @@ body {
   }
 
   .header-info {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 
   .form-card {
     max-width: 900px;
     margin-left: auto;
     margin-right: auto;
-    padding: 2.8rem;
+    padding: 2.5rem;
   }
 
   .form-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
   }
 
   .form-group--full {
     grid-column: 1 / -1;
+  }
+}
+
+/* Print Styles */
+@media print {
+  body {
+    background-color: white;
+  }
+
+  .form-card {
+    box-shadow: none;
+    border-color: #ccc;
+    page-break-inside: avoid;
   }
 }
