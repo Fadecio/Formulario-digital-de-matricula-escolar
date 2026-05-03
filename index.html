@@ -1,584 +1,733 @@
 <!doctype html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Termo de Matrícula</title>
-    <link rel="stylesheet" href="src/css/reset.css" />
-    <link rel="stylesheet" href="src/css/variable.css" />
-    <link rel="stylesheet" href="src/css/global.css" />
-  </head>
-  <body>
-    <header class="header-container">
-      <div class="header-info">
-        <h1>TERMO DE MATRÍCULA</h1>
-      </div>
-    </header>
 
-    <main>
-      <form action="#" method="post">
-        <section class="form-card">
-          <div class="section-header">
-            <span class="section-number">1</span>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Termo de Matrícula</title>
+  <link rel="stylesheet" href="src/css/reset.css" />
+  <link rel="stylesheet" href="src/css/variable.css" />
+  <link rel="stylesheet" href="src/css/global.css" />
+</head>
 
-            <div>
-              <h2 class="section-title">Dados do Aluno</h2>
-              <p class="section-description">
-                Por favor, preencha os dados solicitados abaixo.
-              </p>
-            </div>
-          </div>
+<body>
+  <header class="header-container">
+    <div class="header-info">
+      <h1>TERMO DE MATRÍCULA</h1>
+    </div>
+  </header>
 
-          <div class="form-grid">
-            <div class="form-group form-group--full">
-              <label for="nomeAluno">Nome do aluno</label>
-              <input
-                type="text"
-                id="nomeAluno"
-                name="nomeAluno"
-                class="input-control"
-                placeholder="Digite o nome completo"
-                required
-              />
-              <span class="error-message">Este campo é obrigatório.</span>
-            </div>
-
-            <div class="form-group">
-              <label for="sexo">Sexo</label>
-              <select id="sexo" name="sexo" class="input-control">
-                <option value="">Selecione</option>
-                <option value="masculino">Masculino</option>
-                <option value="feminino">Feminino</option>
-              </select>
-            </div>
-
-            <div class="form-group">
-              <label for="dataNascimento">Data de Nascimento</label>
-              <input
-                type="date"
-                id="dataNascimento"
-                name="dataNascimento"
-                class="input-control"
-                required
-              />
-              <span class="error-message">Este campo é obrigatório.</span>
-            </div>
-
-            <div class="form-group">
-              <label for="cidade">Cidade</label>
-              <input
-                type="text"
-                id="cidade"
-                name="cidade"
-                class="input-control"
-                placeholder="Digite a cidade"
-              />
-              <span class="error-message">Este campo é obrigatório.</span>
-            </div>
-
-            <div class="form-group">
-              <label for="estado">Estado</label>
-              <select id="estado" name="estado" class="input-control">
-                <option value="">Selecione</option>
-                <option value="AC">Acre</option>
-                <option value="AP">Amapá</option>
-                <option value="AM">Amazonas</option>
-                <option value="BA">Bahia</option>
-                <option value="CE">Ceará</option>
-                <option value="DF">Distrito Federal</option>
-                <option value="ES">Espírito Santo</option>
-                <option value="GO">Goiás</option>
-                <option value="MA">Maranhão</option>
-                <option value="MT">Mato Grosso</option>
-                <option value="MS">Mato Grosso do Sul</option>
-                <option value="MG">Minas Gerais</option>
-                <option value="PA">Pará</option>
-                <option value="PB">Paraíba</option>
-                <option value="PR">Paraná</option>
-                <option value="PE">Pernambuco</option>
-                <option value="PI">Piauí</option>
-                <option value="RJ">Rio de Janeiro</option>
-                <option value="RN">Rio Grande do Norte</option>
-                <option value="RS">Rio Grande do Sul</option>
-                <option value="RO">Rondônia</option>
-                <option value="RR">Roraima</option>
-                <option value="SC">Santa Catarina</option>
-                <option value="SP">São Paulo</option>
-                <option value="SE">Sergipe</option>
-                <option value="TO">Tocantins</option>
-              </select>
-              <span class="error-message">Selecione o estado.</span>
-            </div>
-
-            <div class="form-group">
-              <label for="idade">Idade</label>
-              <input
-                type="number"
-                id="idade"
-                name="idade"
-                class="input-control"
-                placeholder="Ex: 10"
-                min="0"
-              />
-              <span class="error-message">Informe uma idade válida.</span>
-            </div>
-          </div>
-        </section>
-
-        <section class="form-card">
-          <div class="section-header">
-            <span class="section-number">2</span>
-
-            <div>
-              <h2 class="section-title">Documentos</h2>
-            </div>
-          </div>
-
-          <div class="form-grid">
-            <div class="form-group form-group--full">
-              <label for="registroNascimento">Registro de nascimento</label>
-              <input
-                type="text"
-                id="registroNascimento"
-                name="registroNascimento"
-                class="input-control"
-                required
-              />
-              <span class="error-message">Este campo é obrigatório.</span>
-            </div>
-
-            <div class="form-group">
-              <label for="folha">Folha</label>
-              <input
-                type="text"
-                id="folha"
-                name="folha"
-                class="input-control"
-                required
-              />
-              <span class="error-message">Este campo é obrigatório</span>
-            </div>
-
-            <div class="form-group">
-              <label for="livro">Livro</label>
-              <input
-                type="text"
-                id="livro"
-                name="livro"
-                class="input-control"
-                required
-              />
-              <span class="error-message">Este campo é obrigatório.</span>
-            </div>
-
-            <div class="form-group">
-              <label for="emissao">Emissão</label>
-              <input
-                type="date"
-                id="emissao"
-                name="emissao"
-                class="input-control"
-              />
-            </div>
-
-            <div class="form-group">
-              <label for="cartorio">Cartório</label>
-              <input
-                type="text"
-                id="cartorio"
-                name="cartorio"
-                class="input-control"
-                required
-              />
-              <span class="error-message">Selecione o estado.</span>
-            </div>
-
-            <div class="form-group">
-              <label for="certidao">Certidão modelo novo</label>
-              <input
-                type="text"
-                id="certidao"
-                name="certidao"
-                class="input-control"
-              />
-            </div>
-            <div class="form-group">
-              <label for="cpf">CPF</label>
-              <input type="text" id="cpf" name="cpf" class="input-control" />
-            </div>
-            <div class="form-group">
-              <label for="cartaoSus">Cartão do SUS</label>
-              <input
-                type="text"
-                id="cartaoSus"
-                name="cartaoSus"
-                class="input-control"
-              />
-            </div>
-          </div>
-        </section>
-
-        <section class="form-card">
-          <div class="section-header">
-            <span class="section-number">3</span>
-
-            <div>
-              <h2 class="section-title">Endereço</h2>
-            </div>
-          </div>
-
-          <div class="form-grid">
-            <div class="form-group form-group--full">
-              <label for="endereco">Endereço</label>
-              <input
-                type="text"
-                id="endereco"
-                name="endereco"
-                class="input-control"
-              />
-            </div>
-
-            <div class="form-group">
-              <label for="bairro">Bairro</label>
-              <input
-                type="text"
-                id="bairro"
-                name="bairro"
-                class="input-control"
-              />
-            </div>
-
-            <div class="form-group">
-              <label for="cep">CEP</label>
-              <input type="text" id="cep" name="cep" class="input-control" />
-            </div>
-          </div>
-        </section>
-
-        <section class="form-card">
-          <div class="section-header">
-            <span class="section-number">4</span>
-
-            <div>
-              <h2 class="section-title">Cor/Raça</h2>
-            </div>
-          </div>
-
-          <div class="form-grid">
-            <div class="form-group form-group--full">
-              <label for="corRaca">Cor/Raça</label>
-              <select
-                id="corRaca"
-                name="corRaca"
-                class="input-control"
-                required
-              >
-                <option value="">Selecione</option>
-                <option value="branca">Branca</option>
-                <option value="preta">Preta</option>
-                <option value="parda">Parda</option>
-                <option value="indigena">Indigena</option>
-                <option value="amarela">Amarela</option>
-                <option value="naoDeclarado">Não declarada</option>
-              </select>
-              <span class="error-message">Este campo é obrigatório.</span>
-            </div>
-          </div>
-        </section>
-
-        <section class="form-card">
-          <div class="section-header">
-            <span class="section-number">5</span>
-
-            <div>
-              <h2 class="section-title">Filiação</h2>
-              <p class="section-description">
-                Preencha com dados do pai, mãe ou responsável.
-              </p>
-            </div>
-          </div>
+  <main>
+    <form action="#" method="post">
+      <section class="form-card">
+        <div class="section-header">
+          <span class="section-number">1</span>
 
           <div>
-            <h2 class="section-title">Filiação 1</h2>
-          </div>
-
-          <div class="form-grid">
-            <div class="form-group form-group--full">
-              <label for="nomeFiliacao1">Nome</label>
-              <input
-                type="text"
-                id="nomeFiliacao1"
-                name="nomeFiliacao1"
-                class="input-control"
-                required
-              />
-              <span class="error-message">Este campo é obrigatório.</span>
-            </div>
-
-            <div class="form-group form-group--full">
-              <label for="profissaoFiliacao1">Profissão</label>
-              <input
-                type="text"
-                id="profissaoFiliacao1"
-                name="profissaoFiliacao1"
-                class="input-control"
-                required
-              />
-              <span class="error-message">Este campo é obrigatório.</span>
-            </div>
-
-            <div class="form-group form-group--full">
-              <label for="escolaridadeFiliacao1">Escolaridade</label>
-              <input
-                type="text"
-                id="escolaridadeFiliacao1"
-                name="escolaridadeFiliacao1"
-                class="input-control"
-              />
-            </div>
-
-            <div class="form-group form-group--full">
-              <label for="telefoneFiliacao1">Telefone</label>
-              <input
-                type="text"
-                id="telefoneFiliacao1"
-                name="telefoneFiliacao1"
-                class="input-control"
-                required
-              />
-              <span class="error-message">Este campo é obrigatório.</span>
-            </div>
-
-            <div class="form-group form-group--full">
-              <label for="emailFiliacao1">Email</label>
-              <input
-                type="email"
-                id="emailFiliacao1"
-                name="emailFiliacao1"
-                class="input-control"
-              />
-            </div>
-
-            <div>
-              <h2 class="section-title">Filiação 2</h2>
-            </div>
-          </div>
-
-          <div class="form-grid">
-            <div class="form-group form-group--full">
-              <label for="nomeFiliacao2">Nome</label>
-              <input
-                type="text"
-                id="nomeFiliacao2"
-                name="nomeFiliacao2"
-                class="input-control"
-              />
-            </div>
-
-            <div class="form-group form-group--full">
-              <label for="profissaoFiliacao2">Profissão</label>
-              <input
-                type="text"
-                id="profissaoFiliacao2"
-                name="profissaoFiliacao2"
-                class="input-control"
-              />
-            </div>
-
-            <div class="form-group form-group--full">
-              <label for="escolaridadeFiliacao2">Escolaridade</label>
-              <input
-                type="text"
-                id="escolaridadeFiliacao2"
-                name="escolaridadeFiliacao2"
-                class="input-control"
-              />
-            </div>
-
-            <div class="form-group form-group--full">
-              <label for="telefoneFiliacao2">Telefone</label>
-              <input
-                type="text"
-                id="telefoneFiliacao2"
-                name="telefoneFiliacao2"
-                class="input-control"
-                required
-              />
-              <span class="error-message">Este campo é obrigatório.</span>
-            </div>
-
-            <div class="form-group form-group--full">
-              <label for="emailFiliacao2">Email</label>
-              <input
-                type="email"
-                id="emailFiliacao2"
-                name="emailFiliacao2"
-                class="input-control"
-              />
-            </div>
-          </div>
-        </section>
-
-        <section class="form-card">
-          <div class="section-header">
-            <span class="section-number">6</span>
-
-            <div>
-              <h2 class="section-title">Atualização de dados escolares</h2>
-            </div>
-          </div>
-
-          <div class="form-grid">
-            <div class="form-group form-group--full">
-              <fieldset class="radio-fieldset">
-                <legend>Transporte escolar</legend>
-                <div class="radio-group">
-                  <label class="radio-option">
-                    <input type="radio" name="transporteEscolar" value="sim" />
-                    Sim
-                  </label>
-                  <label class="radio-option">
-                    <input type="radio" name="transporteEscolar" value="nao" />
-                    Não
-                  </label>
-                </div>
-              </fieldset>
-            </div>
-
-            <div class="form-group form-group--full">
-              <label for="carro">Tipo de transporte</label>
-              <input
-                type="text"
-                id="carro"
-                name="carro"
-                class="input-control"
-              />
-            </div>
-
-            <div class="form-group form-group--full">
-              <label for="nis">NIS</label>
-              <input type="text" id="nis" name="nis" class="input-control" />
-            </div>
-
-            <div class="form-group form-group--full">
-              <label for="sige">ID SIGE</label>
-              <input type="text" id="sige" name="sige" class="input-control" />
-            </div>
-
-            <div class="form-group form-group--full">
-              <label for="censo">ID Censo</label>
-              <input
-                type="text"
-                id="censo"
-                name="censo"
-                class="input-control"
-              />
-            </div>
-
-            <div class="form-group form-group--full">
-                <fieldset class="radio-fieldset">
-                  <legend>Necessidades especiais?</legend>
-
-                  <div class="radio-group ">
-                    <label class="radio-option">
-                      <input type="radio" name="necessidadesEspeciais" value="sim" />
-                      Sim
-                    </label>
-
-                    <label class="radio-option">
-                      <input type="radio" name="necessidadesEspeciais" value="nao" />
-                      Não
-                    </label>
-                  </div>
-                </fieldset>
-              </div>
-
-              <div class="form-group form-group--full">
-                <label for="tipoDeficiencia">Tipo de deficiência</label>
-                <input
-                  type="text"
-                  id="tipoDeficiencia"
-                  name="tipoDeficiencia"
-                  class="input-control"
-                />
-              </div>
-
-              <div class="form-group form-group--full">
-                <label for="cid">Número do CID</label>
-                <input
-                  type="text"
-                  id="cid"
-                  name="cid"
-                  class="input-control"
-                />
-              </div>
-
-              <div class="form-group form-group--full">
-                <fieldset class="radio-fieldset">
-                  <legend>Possui laudo?</legend>
-
-                  <div class="radio-group">
-                    <label class="radio-option">
-                      <input type="radio" name="possuiLaudo" value="sim" />
-                      Sim
-                    </label>
-
-                    <label class="radio-option">
-                      <input type="radio" name="possuiLaudo" value="nao" />
-                      Não
-                    </label>
-                  </div>
-                </fieldset>
-              </div>
-
-              <div class="form-group form-group--full">
-                <fieldset class="radio-fieldset">
-                  <legend>Possui benefício social?</legend>
-
-                  <div class="radio-group">
-                    <label class="radio-option">
-                      <input type="radio" name="possuiBeneficioSocial" value="sim" />
-                      Sim
-                    </label>
-
-                    <label class="radio-option">
-                      <input type="radio" name="possuiBeneficioSocial" value="nao" />
-                      Não
-                    </label>
-                  </div>
-                </fieldset>
-              </div>
-
-            </div>
-          </div>
-        </section>
-
-        <section class="form-card">
-          <div class="section-header">
-            <span class="section-number">7</span>
-
-            <div>
-              <h2 class="section-title">Termo de Responsabilidade</h2>
-              <p class="section-description">
-                Marque a caixa se você concorda com os termos citados.
-              </p>
-            </div>
-          </div>
-
-          <div class="form-grid">
-            <p>
-              Declaro que as informações fornecidas neste formulário são verdadeiras
-              e na qualidade de responsável pelo(a) aluno(a) acima citado no ano letivo em curso, comprometo-me com a frequência, o incentivo ao estudo e permanência do(a) aluno(a) na escola, como também com seu material didático e o zelo pelos bens públicos que estão à sua disposição na Unidade de Ensino.
+            <h2 class="section-title">Dados do Aluno</h2>
+            <p class="section-description">
+              Por favor, preencha os dados solicitados abaixo.
             </p>
+          </div>
+        </div>
 
-            <label class="checkbox-option">
-              <input type="checkbox" name="termoResponsabilidade" required>
-              <span>Li e aceito o termo de responsabilidade.</span>
-            </label>
-          </div>            
-        </section>
+        <div class="form-grid">
+          <div class="form-group form-group--full">
+            <label for="nomeAluno">Nome do aluno</label>
+            <input type="text" id="nomeAluno" name="nomeAluno" class="input-control"
+              placeholder="Digite o nome completo" required />
+            <span class="error-message">Este campo é obrigatório.</span>
+          </div>
 
-      </form>
-    </main>
-  </body>
+          <div class="form-group">
+            <label for="sexo">Sexo</label>
+            <select id="sexo" name="sexo" class="input-control">
+              <option value="">Selecione</option>
+              <option value="masculino">Masculino</option>
+              <option value="feminino">Feminino</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="dataNascimento">Data de Nascimento</label>
+            <input type="date" id="dataNascimento" name="dataNascimento" class="input-control" required />
+            <span class="error-message">Este campo é obrigatório.</span>
+          </div>
+
+          <div class="form-group">
+            <label for="cidade">Cidade</label>
+            <input type="text" id="cidade" name="cidade" class="input-control" placeholder="Digite a cidade" />
+            <span class="error-message">Este campo é obrigatório.</span>
+          </div>
+
+          <div class="form-group">
+            <label for="estado">Estado</label>
+            <select id="estado" name="estado" class="input-control">
+              <option value="">Selecione</option>
+              <option value="AC">Acre</option>
+              <option value="AP">Amapá</option>
+              <option value="AM">Amazonas</option>
+              <option value="BA">Bahia</option>
+              <option value="CE">Ceará</option>
+              <option value="DF">Distrito Federal</option>
+              <option value="ES">Espírito Santo</option>
+              <option value="GO">Goiás</option>
+              <option value="MA">Maranhão</option>
+              <option value="MT">Mato Grosso</option>
+              <option value="MS">Mato Grosso do Sul</option>
+              <option value="MG">Minas Gerais</option>
+              <option value="PA">Pará</option>
+              <option value="PB">Paraíba</option>
+              <option value="PR">Paraná</option>
+              <option value="PE">Pernambuco</option>
+              <option value="PI">Piauí</option>
+              <option value="RJ">Rio de Janeiro</option>
+              <option value="RN">Rio Grande do Norte</option>
+              <option value="RS">Rio Grande do Sul</option>
+              <option value="RO">Rondônia</option>
+              <option value="RR">Roraima</option>
+              <option value="SC">Santa Catarina</option>
+              <option value="SP">São Paulo</option>
+              <option value="SE">Sergipe</option>
+              <option value="TO">Tocantins</option>
+            </select>
+            <span class="error-message">Selecione o estado.</span>
+          </div>
+
+          <div class="form-group">
+            <label for="idade">Idade</label>
+            <input type="number" id="idade" name="idade" class="input-control" placeholder="Ex: 10" min="0" />
+            <span class="error-message">Informe uma idade válida.</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="form-card">
+        <div class="section-header">
+          <span class="section-number">2</span>
+
+          <div>
+            <h2 class="section-title">Documentos</h2>
+          </div>
+        </div>
+
+        <div class="form-grid">
+          <div class="form-group form-group--full">
+            <label for="registroNascimento">Registro de nascimento</label>
+            <input type="text" id="registroNascimento" name="registroNascimento" class="input-control" required />
+            <span class="error-message">Este campo é obrigatório.</span>
+          </div>
+
+          <div class="form-group">
+            <label for="folha">Folha</label>
+            <input type="text" id="folha" name="folha" class="input-control" />
+
+          </div>
+
+          <div class="form-group">
+            <label for="livro">Livro</label>
+            <input type="text" id="livro" name="livro" class="input-control" />
+
+          </div>
+
+          <div class="form-group">
+            <label for="emissao">Emissão</label>
+            <input type="date" id="emissao" name="emissao" class="input-control" />
+          </div>
+
+          <div class="form-group">
+            <label for="cartorio">Cartório</label>
+            <input type="text" id="cartorio" name="cartorio" class="input-control" />
+
+          </div>
+
+          <div class="form-group">
+            <label for="certidao">Certidão modelo novo</label>
+            <input type="text" id="certidao" name="certidao" class="input-control" />
+          </div>
+          <div class="form-group">
+            <label for="cpf">CPF</label>
+            <input type="text" id="cpf" name="cpf" class="input-control" />
+          </div>
+          <div class="form-group">
+            <label for="cartaoSus">Cartão do SUS</label>
+            <input type="text" id="cartaoSus" name="cartaoSus" class="input-control" />
+          </div>
+        </div>
+      </section>
+
+      <section class="form-card">
+        <div class="section-header">
+          <span class="section-number">3</span>
+
+          <div>
+            <h2 class="section-title">Endereço</h2>
+          </div>
+        </div>
+
+        <div class="form-grid">
+          <div class="form-group form-group--full">
+            <label for="endereco">Endereço</label>
+            <input type="text" id="endereco" name="endereco" class="input-control" />
+          </div>
+
+          <div class="form-group">
+            <label for="bairro">Bairro</label>
+            <input type="text" id="bairro" name="bairro" class="input-control" />
+          </div>
+
+          <div class="form-group">
+            <label for="cep">CEP</label>
+            <input type="text" id="cep" name="cep" class="input-control" />
+          </div>
+        </div>
+      </section>
+
+      <section class="form-card">
+        <div class="section-header">
+          <span class="section-number">4</span>
+
+          <div>
+            <h2 class="section-title">Cor/Raça</h2>
+          </div>
+        </div>
+
+        <div class="form-grid">
+          <div class="form-group form-group--full">
+            <label for="corRaca">Cor/Raça</label>
+            <select id="corRaca" name="corRaca" class="input-control" required>
+              <option value="">Selecione</option>
+              <option value="branca">Branca</option>
+              <option value="preta">Preta</option>
+              <option value="parda">Parda</option>
+              <option value="indigena">Indígena</option>
+              <option value="amarela">Amarela</option>
+              <option value="naoDeclarado">Não declarada</option>
+            </select>
+            <span class="error-message">Este campo é obrigatório.</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="form-card">
+        <div class="section-header">
+          <span class="section-number">5</span>
+
+          <div>
+            <h2 class="section-title">Filiação</h2>
+            <p class="section-description">
+              Preencha com dados do pai, mãe ou responsável.
+            </p>
+          </div>
+        </div>
+
+        <div>
+          <h2 class="section-title">Filiação 1</h2>
+        </div>
+
+        <div class="form-grid">
+          <div class="form-group form-group--full">
+            <label for="nomeFiliacao1">Nome</label>
+            <input type="text" id="nomeFiliacao1" name="nomeFiliacao1" class="input-control" required />
+            <span class="error-message">Este campo é obrigatório.</span>
+          </div>
+
+          <div class="form-group">
+            <label for="profissaoFiliacao1">Profissão</label>
+            <input type="text" id="profissaoFiliacao1" name="profissaoFiliacao1" class="input-control" required />
+            <span class="error-message">Este campo é obrigatório.</span>
+          </div>
+
+          <div class="form-group">
+            <label for="escolaridadeFiliacao1">Escolaridade</label>
+            <input type="text" id="escolaridadeFiliacao1" name="escolaridadeFiliacao1" class="input-control" />
+          </div>
+
+          <div class="form-group">
+            <label for="telefoneFiliacao1">Telefone</label>
+            <input type="text" id="telefoneFiliacao1" name="telefoneFiliacao1" class="input-control" required />
+            <span class="error-message">Este campo é obrigatório.</span>
+          </div>
+
+          <div class="form-group">
+            <label for="emailFiliacao1">E-mail</label>
+            <input type="email" id="emailFiliacao1" name="emailFiliacao1" class="input-control" />
+          </div>
+        </div>
+
+        <div>
+          <h2 class="section-title">Filiação 2</h2>
+        </div>
+
+        <div class="form-grid">
+          <div class="form-group form-group--full">
+            <label for="nomeFiliacao2">Nome</label>
+            <input type="text" id="nomeFiliacao2" name="nomeFiliacao2" class="input-control" />
+          </div>
+
+          <div class="form-group">
+            <label for="profissaoFiliacao2">Profissão</label>
+            <input type="text" id="profissaoFiliacao2" name="profissaoFiliacao2" class="input-control" />
+          </div>
+
+          <div class="form-group">
+            <label for="escolaridadeFiliacao2">Escolaridade</label>
+            <input type="text" id="escolaridadeFiliacao2" name="escolaridadeFiliacao2" class="input-control" />
+          </div>
+
+          <div class="form-group">
+            <label for="telefoneFiliacao2">Telefone</label>
+            <input type="text" id="telefoneFiliacao2" name="telefoneFiliacao2" class="input-control" />
+            <span class="error-message">Este campo é obrigatório.</span>
+          </div>
+
+          <div class="form-group">
+            <label for="emailFiliacao2">E-mail</label>
+            <input type="email" id="emailFiliacao2" name="emailFiliacao2" class="input-control" />
+          </div>
+        </div>
+      </section>
+
+      <section class="form-card">
+        <div class="section-header">
+          <span class="section-number">6</span>
+
+          <div>
+            <h2 class="section-title">Atualização de dados escolares</h2>
+          </div>
+        </div>
+
+        <div class="form-grid">
+          <div class="form-group form-group--full">
+            <fieldset class="radio-fieldset">
+              <legend>Transporte escolar</legend>
+              <div class="radio-group">
+                <label class="radio-option">
+                  <input type="radio" name="transporteEscolar" value="sim" />
+                  Sim
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="transporteEscolar" value="nao" />
+                  Não
+                </label>
+              </div>
+            </fieldset>
+          </div>
+
+          <div class="form-group">
+            <label for="tipoTransporte">Tipo de transporte</label>
+            <input type="text" id="tipoTransporte" name="tipoTransporte" class="input-control" />
+          </div>
+
+          <div class="form-group">
+            <label for="nis">NIS</label>
+            <input type="text" id="nis" name="nis" class="input-control" />
+          </div>
+
+          <div class="form-group">
+            <label for="sige">ID SIGE</label>
+            <input type="text" id="sige" name="sige" class="input-control" />
+          </div>
+
+          <div class="form-group">
+            <label for="censo">ID Censo</label>
+            <input type="text" id="censo" name="censo" class="input-control" />
+          </div>
+
+          <div class="form-group">
+            <fieldset class="radio-fieldset">
+              <legend>Necessidades especiais?</legend>
+
+              <div class="radio-group ">
+                <label class="radio-option">
+                  <input type="radio" name="necessidadesEspeciais" value="sim" />
+                  Sim
+                </label>
+
+                <label class="radio-option">
+                  <input type="radio" name="necessidadesEspeciais" value="nao" />
+                  Não
+                </label>
+              </div>
+            </fieldset>
+          </div>
+
+          <div class="form-group">
+            <label for="tipoDeficiencia">Tipo de deficiência</label>
+            <input type="text" id="tipoDeficiencia" name="tipoDeficiencia" class="input-control" />
+          </div>
+
+          <div class="form-group">
+            <label for="cid">Número do CID</label>
+            <input type="text" id="cid" name="cid" class="input-control" />
+          </div>
+
+          <div class="form-group">
+            <fieldset class="radio-fieldset">
+              <legend>Possui laudo?</legend>
+
+              <div class="radio-group">
+                <label class="radio-option">
+                  <input type="radio" name="possuiLaudo" value="sim" />
+                  Sim
+                </label>
+
+                <label class="radio-option">
+                  <input type="radio" name="possuiLaudo" value="nao" />
+                  Não
+                </label>
+              </div>
+            </fieldset>
+          </div>
+
+          <div class="form-group">
+            <fieldset class="radio-fieldset">
+              <legend>Possui benefício social?</legend>
+
+              <div class="radio-group">
+                <label class="radio-option">
+                  <input type="radio" name="possuiBeneficioSocial" value="sim" />
+                  Sim
+                </label>
+
+                <label class="radio-option">
+                  <input type="radio" name="possuiBeneficioSocial" value="nao" />
+                  Não
+                </label>
+              </div>
+            </fieldset>
+          </div>
+
+
+        </div>
+      </section>
+
+      <section class="form-card">
+        <div class="section-header">
+          <span class="section-number">7</span>
+
+          <div>
+            <h2 class="section-title">Termo de Responsabilidade</h2>
+            <p class="section-description">
+              Marque a caixa se você concorda com os termos citados.
+            </p>
+          </div>
+        </div>
+
+        <div class="form-grid termo-responsabilidade">
+          <p>
+            Declaro que as informações fornecidas neste formulário são verdadeiras
+            e na qualidade de responsável pelo(a) aluno(a) acima citado no ano letivo em curso, comprometo-me com a
+            frequência, o incentivo ao estudo e permanência do(a) aluno(a) na escola, como também com seu material
+            didático e o zelo pelos bens públicos que estão à sua disposição na Unidade de Ensino.
+          </p>
+
+          <label class="checkbox-option">
+            <input type="checkbox" name="termoResponsabilidade" required>
+            <span>Li e aceito o termo de responsabilidade.</span>
+          </label>
+        </div>
+
+        <div class="signature-area">
+          <div class="signature-line"></div>
+          <p>Assinatura do responsável</p>
+        </div>
+      </section>
+
+      <section class="form-card">
+        <div class="section-header">
+          <span class="section-number">8</span>
+
+          <div>
+            <h2 class="section-title">Histórico Escolar</h2>
+            <p class="section-description">
+              Registro da trajetória escolar do aluno na instituição.
+            </p>
+          </div>
+        </div>
+
+        <div class="table-wrapper">
+          <table class="school-history-table">
+            <thead>
+              <tr>
+                <th>Ano letivo</th>
+                <th>Etapa/Ano</th>
+                <th>Escola</th>
+                <th>Responsável</th>
+                <th>Parentesco</th>
+                <th>Data da matrícula</th>
+                <th>Resultado final</th>
+                <th>Secretário escolar</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td><input type="text" id="anoLetivo1" name="anoLetivo1" class="table-input" /></td>
+                <td><input type="text" id="etapaAno1" name="etapaAno1" class="table-input" /></td>
+                <td><input type="text" id="escola1" name="escola1" class="table-input" /></td>
+                <td><input type="text" id="responsavelMatricula1" name="responsavelMatricula1" class="table-input" />
+                </td>
+                <td><input type="text" id="parentesco1" name="parentesco1" class="table-input" /></td>
+                <td><input type="date" id="dataMatricula1" name="dataMatricula1" class="table-input" /></td>
+                <td>
+                  <select id="resultadoFinal1" name="resultadoFinal1" class="table-input">
+                    <option value="">Selecione</option>
+                    <option value="cursando">Cursando</option>
+                    <option value="aprovado">Aprovado</option>
+                    <option value="reprovado">Reprovado</option>
+                    <option value="transferido">Transferido</option>
+                  </select>
+                </td>
+                <td><input type="text" id="secretarioEscolar1" name="secretarioEscolar1" class="table-input" /></td>
+              </tr>
+
+              <tr>
+                <td><input type="text" id="anoLetivo2" name="anoLetivo2" class="table-input" /></td>
+                <td><input type="text" id="etapaAno2" name="etapaAno2" class="table-input" /></td>
+                <td><input type="text" id="escola2" name="escola2" class="table-input" /></td>
+                <td><input type="text" id="responsavelMatricula2" name="responsavelMatricula2" class="table-input" />
+                </td>
+                <td><input type="text" id="parentesco2" name="parentesco2" class="table-input" /></td>
+                <td><input type="date" id="dataMatricula2" name="dataMatricula2" class="table-input" /></td>
+                <td>
+                  <select id="resultadoFinal2" name="resultadoFinal2" class="table-input">
+                    <option value="">Selecione</option>
+                    <option value="cursando">Cursando</option>
+                    <option value="aprovado">Aprovado</option>
+                    <option value="reprovado">Reprovado</option>
+                    <option value="transferido">Transferido</option>
+                  </select>
+                </td>
+                <td><input type="text" id="secretarioEscolar2" name="secretarioEscolar2" class="table-input" /></td>
+              </tr>
+
+              <tr>
+                <td><input type="text" id="anoLetivo3" name="anoLetivo3" class="table-input" /></td>
+                <td><input type="text" id="etapaAno3" name="etapaAno3" class="table-input" /></td>
+                <td><input type="text" id="escola3" name="escola3" class="table-input" /></td>
+                <td><input type="text" id="responsavelMatricula3" name="responsavelMatricula3" class="table-input" />
+                </td>
+                <td><input type="text" id="parentesco3" name="parentesco3" class="table-input" /></td>
+                <td><input type="date" id="dataMatricula3" name="dataMatricula3" class="table-input" /></td>
+                <td>
+                  <select id="resultadoFinal3" name="resultadoFinal3" class="table-input">
+                    <option value="">Selecione</option>
+                    <option value="cursando">Cursando</option>
+                    <option value="aprovado">Aprovado</option>
+                    <option value="reprovado">Reprovado</option>
+                    <option value="transferido">Transferido</option>
+                  </select>
+                </td>
+                <td><input type="text" id="secretarioEscolar3" name="secretarioEscolar3" class="table-input" /></td>
+              </tr>
+
+              <tr>
+                <td><input type="text" id="anoLetivo4" name="anoLetivo4" class="table-input" /></td>
+                <td><input type="text" id="etapaAno4" name="etapaAno4" class="table-input" /></td>
+                <td><input type="text" id="escola4" name="escola4" class="table-input" /></td>
+                <td><input type="text" id="responsavelMatricula4" name="responsavelMatricula4" class="table-input" />
+                </td>
+                <td><input type="text" id="parentesco4" name="parentesco4" class="table-input" /></td>
+                <td><input type="date" id="dataMatricula4" name="dataMatricula4" class="table-input" /></td>
+                <td>
+                  <select id="resultadoFinal4" name="resultadoFinal4" class="table-input">
+                    <option value="">Selecione</option>
+                    <option value="cursando">Cursando</option>
+                    <option value="aprovado">Aprovado</option>
+                    <option value="reprovado">Reprovado</option>
+                    <option value="transferido">Transferido</option>
+                  </select>
+                </td>
+                <td><input type="text" id="secretarioEscolar4" name="secretarioEscolar4" class="table-input" /></td>
+              </tr>
+
+              <tr>
+                <td><input type="text" id="anoLetivo5" name="anoLetivo5" class="table-input" /></td>
+                <td><input type="text" id="etapaAno5" name="etapaAno5" class="table-input" /></td>
+                <td><input type="text" id="escola5" name="escola5" class="table-input" /></td>
+                <td><input type="text" id="responsavelMatricula5" name="responsavelMatricula5" class="table-input" />
+                </td>
+                <td><input type="text" id="parentesco5" name="parentesco5" class="table-input" /></td>
+                <td><input type="date" id="dataMatricula5" name="dataMatricula5" class="table-input" /></td>
+                <td>
+                  <select id="resultadoFinal5" name="resultadoFinal5" class="table-input">
+                    <option value="">Selecione</option>
+                    <option value="cursando">Cursando</option>
+                    <option value="aprovado">Aprovado</option>
+                    <option value="reprovado">Reprovado</option>
+                    <option value="transferido">Transferido</option>
+                  </select>
+                </td>
+                <td><input type="text" id="secretarioEscolar5" name="secretarioEscolar5" class="table-input" /></td>
+              </tr>
+
+              <tr>
+                <td><input type="text" id="anoLetivo6" name="anoLetivo6" class="table-input" /></td>
+                <td><input type="text" id="etapaAno6" name="etapaAno6" class="table-input" /></td>
+                <td><input type="text" id="escola6" name="escola6" class="table-input" /></td>
+                <td><input type="text" id="responsavelMatricula6" name="responsavelMatricula6" class="table-input" />
+                </td>
+                <td><input type="text" id="parentesco6" name="parentesco6" class="table-input" /></td>
+                <td><input type="date" id="dataMatricula6" name="dataMatricula6" class="table-input" /></td>
+                <td>
+                  <select id="resultadoFinal6" name="resultadoFinal6" class="table-input">
+                    <option value="">Selecione</option>
+                    <option value="cursando">Cursando</option>
+                    <option value="aprovado">Aprovado</option>
+                    <option value="reprovado">Reprovado</option>
+                    <option value="transferido">Transferido</option>
+                  </select>
+                </td>
+                <td><input type="text" id="secretarioEscolar6" name="secretarioEscolar6" class="table-input" /></td>
+              </tr>
+
+              <tr>
+                <td><input type="text" id="anoLetivo7" name="anoLetivo7" class="table-input" /></td>
+                <td><input type="text" id="etapaAno7" name="etapaAno7" class="table-input" /></td>
+                <td><input type="text" id="escola7" name="escola7" class="table-input" /></td>
+                <td><input type="text" id="responsavelMatricula7" name="responsavelMatricula7" class="table-input" />
+                </td>
+                <td><input type="text" id="parentesco7" name="parentesco7" class="table-input" /></td>
+                <td><input type="date" id="dataMatricula7" name="dataMatricula7" class="table-input" /></td>
+                <td>
+                  <select id="resultadoFinal7" name="resultadoFinal7" class="table-input">
+                    <option value="">Selecione</option>
+                    <option value="cursando">Cursando</option>
+                    <option value="aprovado">Aprovado</option>
+                    <option value="reprovado">Reprovado</option>
+                    <option value="transferido">Transferido</option>
+                  </select>
+                </td>
+                <td><input type="text" id="secretarioEscolar7" name="secretarioEscolar7" class="table-input" /></td>
+              </tr>
+
+              <tr>
+                <td><input type="text" id="anoLetivo8" name="anoLetivo8" class="table-input" /></td>
+                <td><input type="text" id="etapaAno8" name="etapaAno8" class="table-input" /></td>
+                <td><input type="text" id="escola8" name="escola8" class="table-input" /></td>
+                <td><input type="text" id="responsavelMatricula8" name="responsavelMatricula8" class="table-input" />
+                </td>
+                <td><input type="text" id="parentesco8" name="parentesco8" class="table-input" /></td>
+                <td><input type="date" id="dataMatricula8" name="dataMatricula8" class="table-input" /></td>
+                <td>
+                  <select id="resultadoFinal8" name="resultadoFinal8" class="table-input">
+                    <option value="">Selecione</option>
+                    <option value="cursando">Cursando</option>
+                    <option value="aprovado">Aprovado</option>
+                    <option value="reprovado">Reprovado</option>
+                    <option value="transferido">Transferido</option>
+                  </select>
+                </td>
+                <td><input type="text" id="secretarioEscolar8" name="secretarioEscolar8" class="table-input" /></td>
+              </tr>
+
+              <tr>
+                <td><input type="text" id="anoLetivo9" name="anoLetivo9" class="table-input" /></td>
+                <td><input type="text" id="etapaAno9" name="etapaAno9" class="table-input" /></td>
+                <td><input type="text" id="escola9" name="escola9" class="table-input" /></td>
+                <td><input type="text" id="responsavelMatricula9" name="responsavelMatricula9" class="table-input" />
+                </td>
+                <td><input type="text" id="parentesco9" name="parentesco9" class="table-input" /></td>
+                <td><input type="date" id="dataMatricula9" name="dataMatricula9" class="table-input" /></td>
+                <td>
+                  <select id="resultadoFinal9" name="resultadoFinal9" class="table-input">
+                    <option value="">Selecione</option>
+                    <option value="cursando">Cursando</option>
+                    <option value="aprovado">Aprovado</option>
+                    <option value="reprovado">Reprovado</option>
+                    <option value="transferido">Transferido</option>
+                  </select>
+                </td>
+                <td><input type="text" id="secretarioEscolar9" name="secretarioEscolar9" class="table-input" /></td>
+              </tr>
+
+              <tr>
+                <td><input type="text" id="anoLetivo10" name="anoLetivo10" class="table-input" /></td>
+                <td><input type="text" id="etapaAno10" name="etapaAno10" class="table-input" /></td>
+                <td><input type="text" id="escola10" name="escola10" class="table-input" /></td>
+                <td><input type="text" id="responsavelMatricula10" name="responsavelMatricula10" class="table-input" />
+                </td>
+                <td><input type="text" id="parentesco10" name="parentesco10" class="table-input" /></td>
+                <td><input type="date" id="dataMatricula10" name="dataMatricula10" class="table-input" /></td>
+                <td>
+                  <select id="resultadoFinal10" name="resultadoFinal10" class="table-input">
+                    <option value="">Selecione</option>
+                    <option value="cursando">Cursando</option>
+                    <option value="aprovado">Aprovado</option>
+                    <option value="reprovado">Reprovado</option>
+                    <option value="transferido">Transferido</option>
+                  </select>
+                </td>
+                <td><input type="text" id="secretarioEscolar10" name="secretarioEscolar10" class="table-input" /></td>
+              </tr>
+
+              <tr>
+                <td><input type="text" id="anoLetivo11" name="anoLetivo11" class="table-input" /></td>
+                <td><input type="text" id="etapaAno11" name="etapaAno11" class="table-input" /></td>
+                <td><input type="text" id="escola11" name="escola11" class="table-input" /></td>
+                <td><input type="text" id="responsavelMatricula11" name="responsavelMatricula11" class="table-input" />
+                </td>
+                <td><input type="text" id="parentesco11" name="parentesco11" class="table-input" /></td>
+                <td><input type="date" id="dataMatricula11" name="dataMatricula11" class="table-input" /></td>
+                <td>
+                  <select id="resultadoFinal11" name="resultadoFinal11" class="table-input">
+                    <option value="">Selecione</option>
+                    <option value="cursando">Cursando</option>
+                    <option value="aprovado">Aprovado</option>
+                    <option value="reprovado">Reprovado</option>
+                    <option value="transferido">Transferido</option>
+                  </select>
+                </td>
+                <td><input type="text" id="secretarioEscolar11" name="secretarioEscolar11" class="table-input" /></td>
+              </tr>
+
+              <tr>
+                <td><input type="text" id="anoLetivo12" name="anoLetivo12" class="table-input" /></td>
+                <td><input type="text" id="etapaAno12" name="etapaAno12" class="table-input" /></td>
+                <td><input type="text" id="escola12" name="escola12" class="table-input" /></td>
+                <td><input type="text" id="responsavelMatricula12" name="responsavelMatricula12" class="table-input" />
+                </td>
+                <td><input type="text" id="parentesco12" name="parentesco12" class="table-input" /></td>
+                <td><input type="date" id="dataMatricula12" name="dataMatricula12" class="table-input" /></td>
+                <td>
+                  <select id="resultadoFinal12" name="resultadoFinal12" class="table-input">
+                    <option value="">Selecione</option>
+                    <option value="cursando">Cursando</option>
+                    <option value="aprovado">Aprovado</option>
+                    <option value="reprovado">Reprovado</option>
+                    <option value="transferido">Transferido</option>
+                  </select>
+                </td>
+                <td><input type="text" id="secretarioEscolar12" name="secretarioEscolar12" class="table-input" /></td>
+              </tr>
+
+              <tr>
+                <td><input type="text" id="anoLetivo13" name="anoLetivo13" class="table-input" /></td>
+                <td><input type="text" id="etapaAno13" name="etapaAno13" class="table-input" /></td>
+                <td><input type="text" id="escola13" name="escola13" class="table-input" /></td>
+                <td><input type="text" id="responsavelMatricula13" name="responsavelMatricula13" class="table-input" />
+                </td>
+                <td><input type="text" id="parentesco13" name="parentesco13" class="table-input" /></td>
+                <td><input type="date" id="dataMatricula13" name="dataMatricula13" class="table-input" /></td>
+                <td>
+                  <select id="resultadoFinal13" name="resultadoFinal13" class="table-input">
+                    <option value="">Selecione</option>
+                    <option value="cursando">Cursando</option>
+                    <option value="aprovado">Aprovado</option>
+                    <option value="reprovado">Reprovado</option>
+                    <option value="transferido">Transferido</option>
+                  </select>
+                </td>
+                <td><input type="text" id="secretarioEscolar13" name="secretarioEscolar13" class="table-input" /></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+    </form>
+  </main>
+</body>
+
 </html>
