@@ -347,6 +347,55 @@ body {
   box-shadow: 0 0 0 3px var(--institutional-blue-light);
 }
 
+.form-actions {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.btn {
+  width: 100%;
+  min-height: 4.8rem;
+  border: none;
+  border-radius: 1rem;
+  font-family: var(--font-family);
+  font-size: 1.4rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    background-color 200ms ease-in-out,
+    transform 150ms ease-in-out,
+    box-shadow 200ms ease-in-out;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn-primary {
+  background-color: var(--institutional-blue);
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: var(--institutional-blue-hover);
+  box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2);
+}
+
+.btn-secondary {
+  background-color: var(--card-color);
+  color: var(--institutional-blue);
+  border: 2px solid var(--institutional-blue);
+}
+
+.btn-secondary:hover {
+  background-color: var(--institutional-blue-light);
+}
+
 @media (min-width: 768px) {
   body {
     padding: 3.2rem;
@@ -374,6 +423,17 @@ body {
 
   .form-group--full {
     grid-column: 1 / -1;
+  }
+
+  .form-actions {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  .btn {
+    width: auto;
+    min-width: 22rem;
+    padding: 0 2rem;
   }
 }
 
