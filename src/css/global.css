@@ -329,6 +329,11 @@ body {
   white-space: nowrap;
 }
 
+.school-history-table th:nth-child(3),
+.school-history-table td:nth-child(3) {
+  min-width: 28rem;
+}
+
 .table-input {
   width: 100%;
   min-height: 3.8rem;
