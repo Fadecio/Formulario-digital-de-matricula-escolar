@@ -219,12 +219,19 @@ body {
   cursor: not-allowed;
   opacity: 0.6;
 }
-.error-message {
-  display: none;
-  font-size: 0.9rem;
+.form-feddback {
+  width: 100%;
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.form-feedback.is-success {
+  color: var(--success-color);
+}
+
+.form-feedback.is-error {
   color: var(--error-color);
-  margin-top: 0.3rem;
-  animation: slideDown 150ms ease-in-out;
 }
 
 @keyframes slideDown {
@@ -464,13 +471,13 @@ body {
     border: none;
   }
 
-  .matricula-table {
+  .school-history-table {
     min-width: 100%;
     font-size: 0.8rem;
   }
 
-  .matricula-table th,
-  .matricula-table td {
+  .school-history-table th,
+  .school-history-table td {
     padding: 0.4rem;
   }
 
@@ -479,5 +486,9 @@ body {
     min-height: auto;
     padding: 0.2rem;
     font-size: 0.8rem;
+  }
+
+  .form-actions {
+    display: none;
   }
 }
