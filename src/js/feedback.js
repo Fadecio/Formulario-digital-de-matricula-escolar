@@ -1,11 +1,25 @@
-export function mostrarFeedbackSucesso(formFeedback) {
-  formFeedback.textContent = "Matrícula finalizada com sucesso!";
-  formFeedback.className = "form-feedback is-success";
+import { mostrarToast } from "./toast.js";
+
+export function mostrarFeedbackSucesso(formFeedback, toastContainer) {
+  formFeedback.textContent = "";
+  formFeedback.className = "form-feedback";
+
+  mostrarToast(
+    toastContainer, 
+    "Matrícula realizada com sucesso!", 
+    "success"
+  );
 }
 
-export function mostrarFeedbackErro(formFeedback) {
-  formFeedback.textContent = "Preencha todos os campos obrigatórios.";
-  formFeedback.className = "form-feedback is-error";
+export function mostrarFeedbackErro(formFeedback, toastContainer) {
+  formFeedback.textContent = "";
+  formFeedback.className = "form-feedback";
+
+  mostrarToast(
+    toastContainer,
+    "Preencha todos os campos obrigatórios.",
+    "error"
+  );
 }
 
 export function limparFeedback(formFeedback) {

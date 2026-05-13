@@ -2,6 +2,7 @@ import {
   matricula,
   btnPrint,
   formFeedback,
+  toastContainer,
   camposParaValidar,
   campoCpf,
   campoCep,
@@ -47,9 +48,9 @@ function finalizarMatricula(event) {
   const formularioValido = validarFormulario(camposParaValidar);
 
   if (formularioValido) {
-    mostrarFeedbackSucesso(formFeedback);
+    mostrarFeedbackSucesso(formFeedback, toastContainer);
   } else {
-    mostrarFeedbackErro(formFeedback);
+    mostrarFeedbackErro(formFeedback, toastContainer);
     focarPrimeiroCampoInvalido(matricula);
   }
 }
