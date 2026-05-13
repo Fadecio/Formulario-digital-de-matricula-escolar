@@ -1,24 +1,24 @@
 import { validarCampoEspecifico } from "./validators.js";
 
-export function configurarValidacaoEmTempoReal() {
+export function configurarValidacaoEmTempoReal(camposParaValidar, limparFeedback) {
   camposParaValidar.forEach((campo) => {
     campo.addEventListener("input", () => {
-      validarCampoObrigatorio(campo);
+      validarCampo(campo);
       limparFeedback();
     });
 
     campo.addEventListener("change", () => {
-      validarCampoObrigatorio(campo);
+      validarCampo(campo);
       limparFeedback();
     });
   });
 }
 
-export function validarFormulario() {
+export function validarFormulario(camposParaValidar) {
   let formularioValido = true;
 
   camposParaValidar.forEach((campo) => {
-    const campoValido = validarCampoObrigatorio(campo);
+    const campoValido = validarCampo(campo);
 
     if (!campoValido) {
       formularioValido = false;
@@ -74,7 +74,7 @@ function aplicarEstadoInvalido(campoGrupo) {
 }
 
 function aplicarEstadoValido(campoGrupo) {
-  campoGrupo.classList.remove("is-valid");
+  campoGrupo.classList.add("is-valid");
   campoGrupo.classList.remove("is-invalid");
 }
 

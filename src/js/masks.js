@@ -1,4 +1,4 @@
-export function configurarMascaras() {
+export function configurarMascaras(campoCpf, campoCep, campoTelefoneFiliacao1) {
   campoCpf.addEventListener("input", () => {
     campoCpf.value = formatarCpf(campoCpf.value);
   });

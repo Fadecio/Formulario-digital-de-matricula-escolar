@@ -23,6 +23,8 @@ import {
 
 import { focarPrimeiroCampoInvalido } from "./focus.js";
 
+iniciarAplicacao();
+
 function iniciarAplicacao() {
   configurarEventosDoFormulario();
   configurarMascaras(campoCpf, campoCep, campoTelefoneFiliacao1);

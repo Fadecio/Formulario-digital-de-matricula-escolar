@@ -8,4 +8,5 @@ export const camposParaValidar = matricula.querySelectorAll(
 
 export const campoCpf = document.getElementById("cpf");
 export const campoCep = document.getElementById("cep");
-export const campoTelefoneFiliacao1 = document.getElementById("telefoneFiliacao1");
+export const campoTelefoneFiliacao1 =
+  document.getElementById("telefoneFiliacao1");
