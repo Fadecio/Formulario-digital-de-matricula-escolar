@@ -1,0 +1,57 @@
+export function validarCampoEspecifico(campo) {
+  const valor = campo.value.trim();
+
+  if (valor === "") {
+    return true;
+  }
+
+  if (campo.type === "email") {
+    return validarEmail(valor);
+  }
+
+  if (campo.id === "idade") {
+    return validarIdade(valor);
+  }
+
+  if (campo.id === "cpf") {
+    return validarCpf(valor);
+  }
+
+  if (campo.id === "cep") {
+    return validarCep(valor);
+  }
+
+  if (campo.id === "telefoneFiliacao1") {
+    return validarTelefone(valor);
+  }
+
+  return true;
+}
+
+function validarEmail(email) {
+  return email.includes("@") && email.includes(".");
+}
+
+function validarIdade(idade) {
+  const idadeNumero = Number(idade);
+
+  return idadeNumero > 1 && idadeNumero <= 14;
+}
+
+function validarCpf(cpf) {
+  const cpfLimpo = cpf.replace(/\D/g, "");
+
+  return cpfLimpo.length === 11;
+}
+
+function validarCep(cep) {
+  const cepLimpo = cep.replace(/\D/g, "");
+
+  return cepLimpo.length === 8;
+}
+
+function validarTelefone(telefone) {
+  const telefoneLimpo = telefone.replace(/\D/g, "");
+
+  return telefoneLimpo.length >= 10 && telefoneLimpo.length <= 11;
+}
