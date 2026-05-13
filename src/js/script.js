@@ -1,6 +1,7 @@
 import {
   matricula,
   btnPrint,
+  btnNovaMatricula,
   formFeedback,
   toastContainer,
   camposParaValidar,
@@ -19,16 +20,19 @@ import { configurarMascaras } from "./masks.js";
 import {
   mostrarFeedbackSucesso,
   mostrarFeedbackErro,
+  mostrarFeedbackNovaMatricula,
   limparFeedback,
 } from "./feedback.js";
 
 import { focarPrimeiroCampoInvalido } from "./focus.js";
+import { resetarFormulario } from "./formReset.js";
 
 iniciarAplicacao();
 
 function iniciarAplicacao() {
   configurarEventosDoFormulario();
   configurarMascaras(campoCpf, campoCep, campoTelefoneFiliacao1);
+
   configurarValidacaoEmTempoReal(camposParaValidar, () => {
     limparFeedback(formFeedback);
   });
@@ -40,6 +44,8 @@ function configurarEventosDoFormulario() {
   btnPrint.addEventListener("click", () => {
     window.print();
   });
+
+  btnNovaMatricula.addEventListener("click", iniciarNovaMatricula);
 }
 
 function finalizarMatricula(event) {
@@ -53,4 +59,9 @@ function finalizarMatricula(event) {
     mostrarFeedbackErro(formFeedback, toastContainer);
     focarPrimeiroCampoInvalido(matricula);
   }
+}
+
+function iniciarNovaMatricula() {
+  resetarFormulario(matricula, formFeedback);
+  mostrarFeedbackNovaMatricula(formFeedback, toastContainer);
 }
