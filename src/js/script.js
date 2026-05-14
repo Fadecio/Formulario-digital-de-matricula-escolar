@@ -20,14 +20,15 @@ import { configurarMascaras } from "./masks.js";
 import {
   mostrarFeedbackSucesso,
   mostrarFeedbackErro,
+  mostrarFeedbackForaDaFaixaEtaria,
   mostrarFeedbackNovaMatricula,
   limparFeedback,
 } from "./feedback.js";
 
+import { verificarForaDaFaixaEtaria } from "./validators.js";
 import { focarPrimeiroCampoInvalido } from "./focus.js";
 import { resetarFormulario } from "./formReset.js";
 import { configurarImpressao } from "./print.js";
-
 
 iniciarAplicacao();
 
@@ -54,10 +55,22 @@ function finalizarMatricula(event) {
 
   if (formularioValido) {
     mostrarFeedbackSucesso(formFeedback, toastContainer);
+    return;
+  }
+
+  if (criancaEstaForaDaFaixaEtaria()) {
+    mostrarFeedbackForaDaFaixaEtaria(formFeedback, toastContainer);
   } else {
     mostrarFeedbackErro(formFeedback, toastContainer);
-    focarPrimeiroCampoInvalido(matricula);
   }
+
+  focarPrimeiroCampoInvalido(matricula);
+}
+
+function criancaEstaForaDaFaixaEtaria() {
+  const campoDataNascimento = matricula.querySelector("#dataNascimento");
+
+  return verificarForaDaFaixaEtaria(campoDataNascimento.value);
 }
 
 function iniciarNovaMatricula() {

@@ -4,11 +4,7 @@ export function mostrarFeedbackSucesso(formFeedback, toastContainer) {
   formFeedback.textContent = "";
   formFeedback.className = "form-feedback";
 
-  mostrarToast(
-    toastContainer,
-    "Matrícula realizada com sucesso!",
-    "success"
-  );
+  mostrarToast(toastContainer, "Matrícula realizada com sucesso!", "success");
 }
 
 export function mostrarFeedbackErro(formFeedback, toastContainer) {
@@ -18,7 +14,18 @@ export function mostrarFeedbackErro(formFeedback, toastContainer) {
   mostrarToast(
     toastContainer,
     "Preencha todos os campos obrigatórios.",
-    "error"
+    "error",
+  );
+}
+
+export function mostrarFeedbackForaDaFaixaEtaria(formFeedback, toastContainer) {
+  formFeedback.textContent = "";
+  formFeedback.className = "form-feedback";
+
+  mostrarToast(
+    toastContainer,
+    "A criança está fora da faixa etária permitida para matrícula.",
+    "error",
   );
 }
 
@@ -29,7 +36,7 @@ export function mostrarFeedbackNovaMatricula(formFeedback, toastContainer) {
   mostrarToast(
     toastContainer,
     "Formulário limpo para nova matrícula.",
-    "success"
+    "success",
   );
 }
 

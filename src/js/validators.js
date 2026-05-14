@@ -9,6 +9,10 @@ export function validarCampoEspecifico(campo) {
     return validarEmail(valor);
   }
 
+  if (campo.id === "dataNascimento") {
+    return validarDataNascimento(valor);
+  }
+
   if (campo.id === "idade") {
     return validarIdade(valor);
   }
@@ -28,14 +32,47 @@ export function validarCampoEspecifico(campo) {
   return true;
 }
 
+export function verificarForaDaFaixaEtaria(dataNascimento) {
+  if (!dataNascimento) {
+    return false;
+  }
+
+  const dataInformada = criarDataLocal(dataNascimento);
+  const hoje = new Date();
+
+  hoje.setHours(0, 0, 0, 0);
+
+  if (dataInformada > hoje) {
+    return false;
+  }
+
+  const anoLetivo = hoje.getFullYear();
+  const dataLimiteParaCompletarDoisAnos = new Date(anoLetivo - 2, 11, 31);
+
+  return dataInformada > dataLimiteParaCompletarDoisAnos;
+}
+
 function validarEmail(email) {
   return email.includes("@") && email.includes(".");
+}
+
+function validarDataNascimento(dataNascimento) {
+  const dataInformada = criarDataLocal(dataNascimento);
+  const hoje = new Date();
+
+  hoje.setHours(0, 0, 0, 0);
+
+  if (dataInformada > hoje) {
+    return false;
+  }
+
+  return !verificarForaDaFaixaEtaria(dataNascimento);
 }
 
 function validarIdade(idade) {
   const idadeNumero = Number(idade);
 
-  return idadeNumero > 1 && idadeNumero <= 14;
+  return idadeNumero >= 1 && idadeNumero <= 14;
 }
 
 function validarCpf(cpf) {
@@ -54,4 +91,8 @@ function validarTelefone(telefone) {
   const telefoneLimpo = telefone.replace(/\D/g, "");
 
   return telefoneLimpo.length >= 10 && telefoneLimpo.length <= 11;
+}
+
+function criarDataLocal(data) {
+  return new Date(`${data}T00:00:00`);
 }
