@@ -26,12 +26,15 @@ import {
 
 import { focarPrimeiroCampoInvalido } from "./focus.js";
 import { resetarFormulario } from "./formReset.js";
+import { configurarImpressao } from "./print.js";
+
 
 iniciarAplicacao();
 
 function iniciarAplicacao() {
   configurarEventosDoFormulario();
   configurarMascaras(campoCpf, campoCep, campoTelefoneFiliacao1);
+  configurarImpressao(btnPrint, matricula);
 
   configurarValidacaoEmTempoReal(camposParaValidar, () => {
     limparFeedback(formFeedback);
@@ -40,10 +43,6 @@ function iniciarAplicacao() {
 
 function configurarEventosDoFormulario() {
   matricula.addEventListener("submit", finalizarMatricula);
-
-  btnPrint.addEventListener("click", () => {
-    window.print();
-  });
 
   btnNovaMatricula.addEventListener("click", iniciarNovaMatricula);
 }
