@@ -1,7 +1,14 @@
-export function configurarMascaras(campoCpf, campoCep, campoTelefoneFiliacao1) {
-  campoCpf.addEventListener("input", () => {
-    campoCpf.value = formatarCpf(campoCpf.value);
-  });
+export function configurarMascaras(
+  campoCpf,
+  campoCep,
+  campoTelefoneFiliacao1,
+  campoTelefoneFiliacao2,
+) {
+  if (campoCpf) {
+    campoCpf.addEventListener("input", () => {
+      campoCpf.value = formatarCpf(campoCpf.value);
+    });
+  }
 
   campoCep.addEventListener("input", () => {
     campoCep.value = formatarCep(campoCep.value);
@@ -10,6 +17,12 @@ export function configurarMascaras(campoCpf, campoCep, campoTelefoneFiliacao1) {
   campoTelefoneFiliacao1.addEventListener("input", () => {
     campoTelefoneFiliacao1.value = formatarTelefone(
       campoTelefoneFiliacao1.value,
+    );
+  });
+
+  campoTelefoneFiliacao2.addEventListener("input", () => {
+    campoTelefoneFiliacao2.value = formatarTelefone(
+      campoTelefoneFiliacao2.value,
     );
   });
 }

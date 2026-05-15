@@ -13,10 +13,6 @@ export function validarCampoEspecifico(campo) {
     return validarDataNascimento(valor);
   }
 
-  if (campo.id === "idade") {
-    return validarIdade(valor);
-  }
-
   if (campo.id === "cpf") {
     return validarCpf(valor);
   }
@@ -25,7 +21,7 @@ export function validarCampoEspecifico(campo) {
     return validarCep(valor);
   }
 
-  if (campo.id === "telefoneFiliacao1") {
+  if (campo.id.startsWith("telefoneFiliacao")) {
     return validarTelefone(valor);
   }
 
@@ -46,14 +42,34 @@ export function verificarForaDaFaixaEtaria(dataNascimento) {
     return false;
   }
 
+  const idade = calcularIdade(dataNascimento);
+
+  if (idade > 14) {
+    return true;
+  }
+
   const anoLetivo = hoje.getFullYear();
   const dataLimiteParaCompletarDoisAnos = new Date(anoLetivo - 2, 11, 31);
 
   return dataInformada > dataLimiteParaCompletarDoisAnos;
 }
 
+export function verificarDataFutura(dataNascimento) {
+  if (!dataNascimento) {
+    return false;
+  }
+
+  const dataInformada = criarDataLocal(dataNascimento);
+  const hoje = new Date();
+
+  hoje.setHours(0, 0, 0, 0);
+
+  return dataInformada > hoje;
+}
+
 function validarEmail(email) {
-  return email.includes("@") && email.includes(".");
+  const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return regexEmail.test(email);
 }
 
 function validarDataNascimento(dataNascimento) {
@@ -67,12 +83,6 @@ function validarDataNascimento(dataNascimento) {
   }
 
   return !verificarForaDaFaixaEtaria(dataNascimento);
-}
-
-function validarIdade(idade) {
-  const idadeNumero = Number(idade);
-
-  return idadeNumero >= 1 && idadeNumero <= 14;
 }
 
 function validarCpf(cpf) {
@@ -91,6 +101,29 @@ function validarTelefone(telefone) {
   const telefoneLimpo = telefone.replace(/\D/g, "");
 
   return telefoneLimpo.length >= 10 && telefoneLimpo.length <= 11;
+}
+
+function calcularIdade(dataNascimento) {
+  const nascimento = criarDataLocal(dataNascimento);
+  const hoje = new Date();
+
+  let idade = hoje.getFullYear() - nascimento.getFullYear();
+
+  const mesAtual = hoje.getMonth();
+  const diaAtual = hoje.getDate();
+
+  const mesNascimento = nascimento.getMonth();
+  const diaNascimento = nascimento.getDate();
+
+  const aindaNaoFezAniversario =
+    mesAtual < mesNascimento ||
+    (mesAtual === mesNascimento && diaAtual < diaNascimento);
+
+  if (aindaNaoFezAniversario) {
+    idade--;
+  }
+
+  return idade;
 }
 
 function criarDataLocal(data) {

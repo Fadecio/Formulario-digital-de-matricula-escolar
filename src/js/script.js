@@ -7,7 +7,10 @@ import {
   camposParaValidar,
   campoCpf,
   campoCep,
+  campoDataNascimento,
+  campoIdade,
   campoTelefoneFiliacao1,
+  campoTelefoneFiliacao2,
 } from "./elements.js";
 
 import {
@@ -21,20 +24,39 @@ import {
   mostrarFeedbackSucesso,
   mostrarFeedbackErro,
   mostrarFeedbackForaDaFaixaEtaria,
+  mostrarFeedbackDataFutura,
   mostrarFeedbackNovaMatricula,
   limparFeedback,
 } from "./feedback.js";
 
-import { verificarForaDaFaixaEtaria } from "./validators.js";
+import {
+  verificarForaDaFaixaEtaria,
+  verificarDataFutura,
+} from "./validators.js";
 import { focarPrimeiroCampoInvalido } from "./focus.js";
 import { resetarFormulario } from "./formReset.js";
 import { configurarImpressao } from "./print.js";
+import { calcularIdadeAutomatica } from "./age.js";
 
 iniciarAplicacao();
 
 function iniciarAplicacao() {
   configurarEventosDoFormulario();
-  configurarMascaras(campoCpf, campoCep, campoTelefoneFiliacao1);
+
+  configurarMascaras(
+    campoCpf,
+    campoCep,
+    campoTelefoneFiliacao1,
+    campoTelefoneFiliacao2,
+  );
+
+  calcularIdadeAutomatica(
+    campoDataNascimento,
+    campoIdade,
+    formFeedback,
+    toastContainer,
+  );
+
   configurarImpressao(btnPrint, matricula);
 
   configurarValidacaoEmTempoReal(camposParaValidar, () => {
@@ -58,7 +80,9 @@ function finalizarMatricula(event) {
     return;
   }
 
-  if (criancaEstaForaDaFaixaEtaria()) {
+  if (dataNascimentoEstaNoFuturo()) {
+    mostrarFeedbackDataFutura(formFeedback, toastContainer);
+  } else if (criancaEstaForaDaFaixaEtaria()) {
     mostrarFeedbackForaDaFaixaEtaria(formFeedback, toastContainer);
   } else {
     mostrarFeedbackErro(formFeedback, toastContainer);
@@ -67,10 +91,10 @@ function finalizarMatricula(event) {
   focarPrimeiroCampoInvalido(matricula);
 }
 
-function criancaEstaForaDaFaixaEtaria() {
+function dataNascimentoEstaNoFuturo() {
   const campoDataNascimento = matricula.querySelector("#dataNascimento");
 
-  return verificarForaDaFaixaEtaria(campoDataNascimento.value);
+  return verificarDataFutura(campoDataNascimento.value);
 }
 
 function iniciarNovaMatricula() {

@@ -62,7 +62,10 @@
                 class="input-control"
                 required
               />
-              <span class="error-message">Informe uma data válida. A criança precisa ter 2 anos completos ou completar 2 anos durante o ano letivo.</span>
+              <span class="error-message"
+                >Informe uma data válida. A criança precisa ter 2 anos completos
+                ou completar 2 anos durante o ano letivo.</span
+              >
             </div>
 
             <div class="form-group">
@@ -73,13 +76,14 @@
                 name="cidade"
                 class="input-control"
                 placeholder="Digite a cidade"
+                required
               />
               <span class="error-message">Este campo é obrigatório.</span>
             </div>
 
             <div class="form-group">
               <label for="estado">Estado</label>
-              <select id="estado" name="estado" class="input-control">
+              <select id="estado" name="estado" class="input-control" required>
                 <option value="">Selecione</option>
                 <option value="AC">Acre</option>
                 <option value="AP">Amapá</option>
@@ -118,8 +122,9 @@
                 id="idade"
                 name="idade"
                 class="input-control"
-                placeholder="Ex: 10"
+                placeholder="Calculada automaticamente"
                 min="0"
+                readonly
               />
               <span class="error-message">Informe uma idade válida.</span>
             </div>
@@ -401,6 +406,7 @@
                 name="telefoneFiliacao2"
                 class="input-control"
               />
+              <span class="error-message">Informe um telefone válido.</span>
             </div>
 
             <div class="form-group">
@@ -411,6 +417,7 @@
                 name="emailFiliacao2"
                 class="input-control"
               />
+              <span class="error-message">Informe um e-mail válido.</span>
             </div>
           </div>
         </section>

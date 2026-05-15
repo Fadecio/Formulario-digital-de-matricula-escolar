@@ -3,9 +3,19 @@ export function mostrarToast(toastContainer, mensagem, tipo = "success") {
     return;
   }
 
+  const toastDuplicado = toastContainer.querySelector(
+    `.toast[data-message="${mensagem}"][data-type="${tipo}"]`,
+  );
+
+  if (toastDuplicado) {
+    return;
+  }
+
   const toast = document.createElement("div");
 
   toast.className = `toast toast--${tipo}`;
+  toast.dataset.message = mensagem;
+  toast.dataset.type = tipo;
   toast.setAttribute("role", tipo === "error" ? "alert" : "status");
 
   toast.innerHTML = `

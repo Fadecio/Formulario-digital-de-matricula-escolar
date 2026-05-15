@@ -5,10 +5,16 @@ export const formFeedback = document.getElementById("formFeedback");
 export const toastContainer = document.getElementById("toastContainer");
 
 export const camposParaValidar = matricula.querySelectorAll(
-  "[required], #idade, #cpf, #cep, #telefoneFiliacao1, #emailFiliacao1",
+  "[required], #cpf, #cep, input[type='email'], #telefoneFiliacao1, #telefoneFiliacao2",
 );
 
 export const campoCpf = document.getElementById("cpf");
 export const campoCep = document.getElementById("cep");
+export const campoDataNascimento = document.getElementById("dataNascimento");
+export const campoIdade = document.getElementById("idade");
+
 export const campoTelefoneFiliacao1 =
   document.getElementById("telefoneFiliacao1");
+  
+export const campoTelefoneFiliacao2 =
+  document.getElementById("telefoneFiliacao2");

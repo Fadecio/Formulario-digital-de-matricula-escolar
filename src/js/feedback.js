@@ -29,6 +29,17 @@ export function mostrarFeedbackForaDaFaixaEtaria(formFeedback, toastContainer) {
   );
 }
 
+export function mostrarFeedbackDataFutura(formFeedback, toastContainer) {
+  formFeedback.textContent = "";
+  formFeedback.className = "form-feedback";
+
+  mostrarToast(
+    toastContainer,
+    "A data de nascimento não pode ser uma data futura.",
+    "error",
+  );
+}
+
 export function mostrarFeedbackNovaMatricula(formFeedback, toastContainer) {
   formFeedback.textContent = "";
   formFeedback.className = "form-feedback";
