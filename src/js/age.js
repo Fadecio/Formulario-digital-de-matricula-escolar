@@ -11,7 +11,7 @@ import {
 
 let ultimoErroDeIdade = null;
 
-export function calcularIdadeAutomatica(
+export function configurarIdadeAutomatica(
   campoDataNascimento,
   campoIdade,
   formFeedback,

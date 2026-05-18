@@ -11,6 +11,8 @@ import {
   campoIdade,
   campoTelefoneFiliacao1,
   campoTelefoneFiliacao2,
+  radiosTransporteEscolar,
+  campoTipoTransporte,
 } from "./elements.js";
 
 import {
@@ -36,7 +38,11 @@ import {
 import { focarPrimeiroCampoInvalido } from "./focus.js";
 import { resetarFormulario } from "./formReset.js";
 import { configurarImpressao } from "./print.js";
-import { calcularIdadeAutomatica } from "./age.js";
+import { configurarIdadeAutomatica } from "./age.js";
+import {
+  configurarCamposCondicionais,
+  atualizarCamposCondicionais,
+} from "./conditionalFields.js";
 
 iniciarAplicacao();
 
@@ -50,11 +56,16 @@ function iniciarAplicacao() {
     campoTelefoneFiliacao2,
   );
 
-  calcularIdadeAutomatica(
+  configurarIdadeAutomatica(
     campoDataNascimento,
     campoIdade,
     formFeedback,
     toastContainer,
+  );
+
+  configurarCamposCondicionais(
+    radiosTransporteEscolar, 
+    campoTipoTransporte,
   );
 
   configurarImpressao(btnPrint, matricula);
@@ -99,5 +110,11 @@ function dataNascimentoEstaNoFuturo() {
 
 function iniciarNovaMatricula() {
   resetarFormulario(matricula, formFeedback);
+
+  atualizarCamposCondicionais(
+    radiosTransporteEscolar,
+    campoTipoTransporte,
+  );
+  
   mostrarFeedbackNovaMatricula(formFeedback, toastContainer);
 }

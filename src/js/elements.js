@@ -5,7 +5,7 @@ export const formFeedback = document.getElementById("formFeedback");
 export const toastContainer = document.getElementById("toastContainer");
 
 export const camposParaValidar = matricula.querySelectorAll(
-  "[required], #cpf, #cep, input[type='email'], #telefoneFiliacao1, #telefoneFiliacao2",
+  "[required], #cpf, #cep, input[type='email'], #telefoneFiliacao1, #telefoneFiliacao2, #tipoTransporte"
 );
 
 export const campoCpf = document.getElementById("cpf");
@@ -18,3 +18,7 @@ export const campoTelefoneFiliacao1 =
   
 export const campoTelefoneFiliacao2 =
   document.getElementById("telefoneFiliacao2");
+
+  export const radiosTransporteEscolar = document.querySelectorAll("input[name='transporteEscolar']");
+
+  export const campoTipoTransporte = document.getElementById("tipoTransporte");
