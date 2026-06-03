@@ -8,7 +8,22 @@ O objetivo deste projeto é facilitar o preenchimento de uma ficha de matrícula
 
 Este projeto foi desenvolvido com foco em prática de HTML, CSS e JavaScript modular, simulando uma necessidade real de digitalização de documentos escolares.
 
-## 🚀 Funcionalidades
+## Preview
+
+### Apresentação do projeto
+
+
+<p align="center">
+  <img 
+    src="./src/images/apresentacao.png" 
+    alt="Preview de apresentação Folha de matrícula" 
+    width="900" 
+    height="506"
+  >
+</p>
+
+
+## Funcionalidades
 
 - Formulário completo de matrícula escolar.
 - Layout responsivo para desktop, tablet e celular.
@@ -27,7 +42,7 @@ Este projeto foi desenvolvido com foco em prática de HTML, CSS e JavaScript mod
 - Impressão em modo paisagem.
 - Ajustes específicos para impressão, incluindo remoção de ícones de data e campos vazios da tabela em branco.
 
-## 🛠️ Tecnologias utilizadas
+## Tecnologias utilizadas
 
 - HTML5
 - CSS3
@@ -38,7 +53,7 @@ Este projeto foi desenvolvido com foco em prática de HTML, CSS e JavaScript mod
 - Media Queries
 - Print CSS
 
-## 📁 Estrutura do projeto
+## Estrutura do projeto
 
 ```txt
 .
@@ -63,7 +78,7 @@ Este projeto foi desenvolvido com foco em prática de HTML, CSS e JavaScript mod
 │       └── validators.js
 ```
 
-## ▶️ Como executar o projeto
+## Como executar o projeto
 
 1. Clone o repositório:
 
@@ -81,7 +96,7 @@ cd Formulario-digital-de-matricula-escolar
 
 Também é possível executar com a extensão **Live Server** no VS Code.
 
-## 📋 Regras de negócio implementadas
+## Regras de negócio implementadas
 
 ### Data de nascimento
 
@@ -126,7 +141,7 @@ Também é possível executar com a extensão **Live Server** no VS Code.
 - Campos vazios da tabela permanecem em branco na impressão.
 - Datas da tabela são formatadas corretamente para impressão.
 
-## 📚 Aprendizados aplicados
+## Aprendizados aplicados
 
 - Organização de código JavaScript em módulos.
 - Manipulação do DOM.
@@ -138,7 +153,7 @@ Também é possível executar com a extensão **Live Server** no VS Code.
 - Estilização para tela e impressão.
 - Responsividade com CSS Grid, Flexbox e Media Queries.
 
-## 👨‍💻 Autor
+## Autor
 
 Desenvolvido por **Fadecio Lemos**.
 
