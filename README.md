@@ -15,7 +15,7 @@ Este projeto foi desenvolvido com foco em prática de HTML, CSS e JavaScript mod
 
 <p align="center">
   <img 
-    src="./src/images/apresentacao.png" 
+    src="./src/images/linkedin.png" 
     alt="Preview de apresentação Folha de matrícula" 
     width="900" 
     height="506"
