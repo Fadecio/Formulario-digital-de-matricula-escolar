@@ -2,7 +2,7 @@
 
 Projeto front-end desenvolvido para transformar uma folha de matrícula escolar em um formulário digital, responsivo e preparado para impressão. A aplicação permite preencher dados do aluno, documentos, endereço, filiação, informações escolares, termo de responsabilidade e histórico de matrícula.
 
-- Deploy: fadecio.github.io/Formulario-digital-de-matricula-escolar/  
+- Deploy: http://fadecio.github.io/Formulario-digital-de-matricula-escolar/  
 - Status: Finalizado  
 - Conceitos praticados: JavaScript, DOM, localStorage, responsividade, UX  
 
